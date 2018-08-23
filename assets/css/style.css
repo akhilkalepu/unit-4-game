@@ -1,0 +1,55 @@
+body {
+    background-image: url("../images/star\ wars\ background.jpg");
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-color: black;
+}
+
+/* GAME TITLE TOP */
+.game-title {
+    color: black;
+    background-color: white;
+    padding: 10px;
+    text-align: center;
+    opacity: .35;
+}
+
+/* CHARACTER CARDS */
+.choose-player {
+    text-align: center;
+}
+    .card {
+        margin: 10px;
+        display: inline-block;
+        float: none;
+    }
+        .card-body {
+            width: 200px;
+            color: black;
+            background-color: white;
+            text-align: center;
+            opacity: .35;
+        }
+
+/* ATTACK BUTTON */
+
+.attack-row {
+    margin: 10px;
+    display: inline-block;
+    float: none;
+}
+    .attack-btn {
+        width: 100%;
+        color: black;
+        background-color: red;
+        text-align: center;
+        opacity: .35;
+    }
+
+/* CHARACTER AREAS */
+.characters {
+    color: black;
+    background-color: white;
+    text-align: center;
+    opacity: .35;
+}

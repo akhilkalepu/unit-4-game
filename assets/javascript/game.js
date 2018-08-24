@@ -44,7 +44,7 @@ var snoke =
 
 // HEALTH VARIABLES
 var lukeHealth = 100;
-var reyHealth = 2500;
+var reyHealth = 250;
 var kyloHealth = 175;
 var snokeHealth = 300;
 

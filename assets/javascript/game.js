@@ -43,10 +43,10 @@ var snoke =
 // var defenderHealth = 0;
 
 // HEALTH VARIABLES
-var lukeHealth = 150;
-var reyHealth = 100;
-var kyloHealth = 120;
-var snokeHealth = 180;
+var lukeHealth = 100;
+var reyHealth = 2500;
+var kyloHealth = 175;
+var snokeHealth = 300;
 
     // PRINT HEALTH POINTS TO CARDS
     $("#luke-points").text("Health Points: " + lukeHealth);
@@ -58,10 +58,18 @@ var snokeHealth = 180;
 var attackPower = 8;
 var counterPower = 25;
 
-// ----------------GAME----------------
+
+
+
+
+
+
+
+
+// --------------------------------GAME--------------------------------
 // CHOOSE CHARACTER
 
-// CHOOSE TO PLAY AS LUKE
+// ----------------CHOOSE TO PLAY AS LUKE----------------
 $("#luke-card").on("click", function() {
     $(".choose-player").html("");
     $("#your-area").html(luke);
@@ -88,7 +96,113 @@ $("#luke-card").on("click", function() {
                 $("#rey-points").text("Health Points: " + reyHealth);
                 $("#kylo-points").text("Health Points: " + kyloHealth);
                 $("#snoke-points").text("Health Points: " + snokeHealth);
+                if (reyHealth <= 0) {
+                    $("#defender-area").html("");
+                }
+                if (lukeHealth <= 0) {
+                    $("#your-area").html("");
+                }
         });
+            // ROUND 2: KYLO AS DEFENDER
+            $("#kylo-card").on("click", function () {
+                $("#defender-area").html(kylo);
+                $("#enemies-area").html(snoke);
+                    $("#luke-points").text("Health Points: " + lukeHealth);
+                    $("#rey-points").text("Health Points: " + reyHealth);
+                    $("#kylo-points").text("Health Points: " + kyloHealth);
+                    $("#snoke-points").text("Health Points: " + snokeHealth);
+                // ATTACK
+                $(".attack-btn").on("click", function () {
+                    kyloHealth = kyloHealth - attackPower;
+                    lukeHealth = lukeHealth - counterPower;
+                    attackPower = attackPower + 8;
+                        $("#luke-points").text("Health Points: " + lukeHealth);
+                        $("#rey-points").text("Health Points: " + reyHealth);
+                        $("#kylo-points").text("Health Points: " + kyloHealth);
+                        $("#snoke-points").text("Health Points: " + snokeHealth);
+                        if (kyloHealth <= 0) {
+                            $("#defender-area").html("");
+                        }
+                        if (lukeHealth <= 0) {
+                            $("#your-area").html("");
+                        }
+                });
+                        // ROUND 3: SNOKE AS DEFENDER
+                        $("#snoke-card").on("click", function () {
+                            $("#defender-area").html(snoke);
+                            $("#enemies-area").html("");
+                                $("#luke-points").text("Health Points: " + lukeHealth);
+                                $("#rey-points").text("Health Points: " + reyHealth);
+                                $("#kylo-points").text("Health Points: " + kyloHealth);
+                                $("#snoke-points").text("Health Points: " + snokeHealth);
+                            // ATTACK
+                            $(".attack-btn").on("click", function () {
+                                snokeHealth = snokeHealth - attackPower;
+                                lukeHealth = lukeHealth - counterPower;
+                                attackPower = attackPower + 8;
+                                    $("#luke-points").text("Health Points: " + lukeHealth);
+                                    $("#rey-points").text("Health Points: " + reyHealth);
+                                    $("#kylo-points").text("Health Points: " + kyloHealth);
+                                    $("#snoke-points").text("Health Points: " + snokeHealth);
+                                    if (snokeHealth <= 0) {
+                                        $("#defender-area").html("");
+                                    }
+                                    if (lukeHealth <= 0) {
+                                        $("#your-area").html("");
+                                    }
+                            });
+                        });
+            });
+            // ROUND 2: SNOKE AS DEFENDER
+            $("#snoke-card").on("click", function () {
+                $("#defender-area").html(snoke);
+                $("#enemies-area").html(kylo);
+                    $("#luke-points").text("Health Points: " + lukeHealth);
+                    $("#rey-points").text("Health Points: " + reyHealth);
+                    $("#kylo-points").text("Health Points: " + kyloHealth);
+                    $("#snoke-points").text("Health Points: " + snokeHealth);
+                // ATTACK
+                $(".attack-btn").on("click", function () {
+                    snokeHealth = snokeHealth - attackPower;
+                    lukeHealth = lukeHealth - counterPower;
+                    attackPower = attackPower + 8;
+                        $("#luke-points").text("Health Points: " + lukeHealth);
+                        $("#rey-points").text("Health Points: " + reyHealth);
+                        $("#kylo-points").text("Health Points: " + kyloHealth);
+                        $("#snoke-points").text("Health Points: " + snokeHealth);
+                        if (snokeHealth <= 0) {
+                            $("#defender-area").html("");
+                        }
+                        if (lukeHealth <= 0) {
+                            $("#your-area").html("");
+                        }
+                });
+                        // ROUND 3: KYLO AS DEFENDER
+                        $("#kylo-card").on("click", function () {
+                            $("#defender-area").html(kylo);
+                            $("#enemies-area").html("");
+                                $("#luke-points").text("Health Points: " + lukeHealth);
+                                $("#rey-points").text("Health Points: " + reyHealth);
+                                $("#kylo-points").text("Health Points: " + kyloHealth);
+                                $("#snoke-points").text("Health Points: " + snokeHealth);
+                            // ATTACK
+                            $(".attack-btn").on("click", function () {
+                                kyloHealth = kyloHealth - attackPower;
+                                lukeHealth = lukeHealth - counterPower;
+                                attackPower = attackPower + 8;
+                                    $("#luke-points").text("Health Points: " + lukeHealth);
+                                    $("#rey-points").text("Health Points: " + reyHealth);
+                                    $("#kylo-points").text("Health Points: " + kyloHealth);
+                                    $("#snoke-points").text("Health Points: " + snokeHealth);
+                                    if (kyloHealth <= 0) {
+                                        $("#defender-area").html("");
+                                    }
+                                    if (lukeHealth <= 0) {
+                                        $("#your-area").html("");
+                                    }
+                            });
+                        });
+            });
     });
     // CHOOSE KYLO AS DEFENDER
     $("#kylo-card").on("click", function () {
@@ -107,7 +221,113 @@ $("#luke-card").on("click", function() {
                 $("#rey-points").text("Health Points: " + reyHealth);
                 $("#kylo-points").text("Health Points: " + kyloHealth);
                 $("#snoke-points").text("Health Points: " + snokeHealth);
+                if (kyloHealth <= 0) {
+                    $("#defender-area").html("");
+                }
+                if (lukeHealth <= 0) {
+                    $("#your-area").html("");
+                }
         });
+            // ROUND 2: REY AS DEFENDER
+            $("#rey-card").on("click", function () {
+                $("#defender-area").html(rey);
+                $("#enemies-area").html(snoke);
+                    $("#luke-points").text("Health Points: " + lukeHealth);
+                    $("#rey-points").text("Health Points: " + reyHealth);
+                    $("#kylo-points").text("Health Points: " + kyloHealth);
+                    $("#snoke-points").text("Health Points: " + snokeHealth);
+                // ATTACK
+                $(".attack-btn").on("click", function () {
+                    reyHealth = reyHealth - attackPower;
+                    lukeHealth = lukeHealth - counterPower;
+                    attackPower = attackPower + 8;
+                        $("#luke-points").text("Health Points: " + lukeHealth);
+                        $("#rey-points").text("Health Points: " + reyHealth);
+                        $("#kylo-points").text("Health Points: " + kyloHealth);
+                        $("#snoke-points").text("Health Points: " + snokeHealth);
+                        if (reyHealth <= 0) {
+                            $("#defender-area").html("");
+                        }
+                        if (lukeHealth <= 0) {
+                            $("#your-area").html("");
+                        }
+                });
+                        // ROUND 3: SNOKE AS DEFENDER
+                        $("#snoke-card").on("click", function () {
+                            $("#defender-area").html(snoke);
+                            $("#enemies-area").html("");
+                                $("#luke-points").text("Health Points: " + lukeHealth);
+                                $("#rey-points").text("Health Points: " + reyHealth);
+                                $("#kylo-points").text("Health Points: " + kyloHealth);
+                                $("#snoke-points").text("Health Points: " + snokeHealth);
+                            // ATTACK
+                            $(".attack-btn").on("click", function () {
+                                snokeHealth = snokeHealth - attackPower;
+                                lukeHealth = lukeHealth - counterPower;
+                                attackPower = attackPower + 8;
+                                    $("#luke-points").text("Health Points: " + lukeHealth);
+                                    $("#rey-points").text("Health Points: " + reyHealth);
+                                    $("#kylo-points").text("Health Points: " + kyloHealth);
+                                    $("#snoke-points").text("Health Points: " + snokeHealth);
+                                    if (snokeHealth <= 0) {
+                                        $("#defender-area").html("");
+                                    }
+                                    if (lukeHealth <= 0) {
+                                        $("#your-area").html("");
+                                    }
+                            });
+                        });
+            });
+            // ROUND 2: SNOKE AS DEFENDER
+            $("#snoke-card").on("click", function () {
+                $("#defender-area").html(snoke);
+                $("#enemies-area").html(rey);
+                    $("#luke-points").text("Health Points: " + lukeHealth);
+                    $("#rey-points").text("Health Points: " + reyHealth);
+                    $("#kylo-points").text("Health Points: " + kyloHealth);
+                    $("#snoke-points").text("Health Points: " + snokeHealth);
+                // ATTACK
+                $(".attack-btn").on("click", function () {
+                    snokeHealth = snokeHealth - attackPower;
+                    lukeHealth = lukeHealth - counterPower;
+                    attackPower = attackPower + 8;
+                        $("#luke-points").text("Health Points: " + lukeHealth);
+                        $("#rey-points").text("Health Points: " + reyHealth);
+                        $("#kylo-points").text("Health Points: " + kyloHealth);
+                        $("#snoke-points").text("Health Points: " + snokeHealth);
+                        if (snokeHealth <= 0) {
+                            $("#defender-area").html("");
+                        }
+                        if (lukeHealth <= 0) {
+                            $("#your-area").html("");
+                        }
+                });
+                        // ROUND 3: REY AS DEFENDER
+                        $("#rey-card").on("click", function () {
+                            $("#defender-area").html(rey);
+                            $("#enemies-area").html("");
+                                $("#luke-points").text("Health Points: " + lukeHealth);
+                                $("#rey-points").text("Health Points: " + reyHealth);
+                                $("#kylo-points").text("Health Points: " + kyloHealth);
+                                $("#snoke-points").text("Health Points: " + snokeHealth);
+                            // ATTACK
+                            $(".attack-btn").on("click", function () {
+                                reyHealth = reyHealth - attackPower;
+                                lukeHealth = lukeHealth - counterPower;
+                                attackPower = attackPower + 8;
+                                    $("#luke-points").text("Health Points: " + lukeHealth);
+                                    $("#rey-points").text("Health Points: " + reyHealth);
+                                    $("#kylo-points").text("Health Points: " + kyloHealth);
+                                    $("#snoke-points").text("Health Points: " + snokeHealth);
+                                    if (reyHealth <= 0) {
+                                        $("#defender-area").html("");
+                                    }
+                                    if (lukeHealth <= 0) {
+                                        $("#your-area").html("");
+                                    }
+                            });
+                        });
+            });
     });
     // CHOOSE SNOKE AS DEFENDER
     $("#snoke-card").on("click", function () {
@@ -126,11 +346,130 @@ $("#luke-card").on("click", function() {
                 $("#rey-points").text("Health Points: " + reyHealth);
                 $("#kylo-points").text("Health Points: " + kyloHealth);
                 $("#snoke-points").text("Health Points: " + snokeHealth);
+                if (snokeHealth <= 0) {
+                    $("#defender-area").html("");
+                }
+                if (lukeHealth <= 0) {
+                    $("#your-area").html("");
+                }
         });
+            // ROUND 2: REY AS DEFENDER
+            $("#rey-card").on("click", function () {
+                $("#defender-area").html(rey);
+                $("#enemies-area").html(kylo);
+                    $("#luke-points").text("Health Points: " + lukeHealth);
+                    $("#rey-points").text("Health Points: " + reyHealth);
+                    $("#kylo-points").text("Health Points: " + kyloHealth);
+                    $("#snoke-points").text("Health Points: " + snokeHealth);
+                // ATTACK
+                $(".attack-btn").on("click", function () {
+                    reyHealth = reyHealth - attackPower;
+                    lukeHealth = lukeHealth - counterPower;
+                    attackPower = attackPower + 8;
+                        $("#luke-points").text("Health Points: " + lukeHealth);
+                        $("#rey-points").text("Health Points: " + reyHealth);
+                        $("#kylo-points").text("Health Points: " + kyloHealth);
+                        $("#snoke-points").text("Health Points: " + snokeHealth);
+                        if (reyHealth <= 0) {
+                            $("#defender-area").html("");
+                        }
+                        if (lukeHealth <= 0) {
+                            $("#your-area").html("");
+                        }
+                });
+                        // ROUND 3: KYLO AS DEFENDER
+                        $("#kylo-card").on("click", function () {
+                            $("#defender-area").html(kylo);
+                            $("#enemies-area").html("");
+                                $("#luke-points").text("Health Points: " + lukeHealth);
+                                $("#rey-points").text("Health Points: " + reyHealth);
+                                $("#kylo-points").text("Health Points: " + kyloHealth);
+                                $("#snoke-points").text("Health Points: " + snokeHealth);
+                            // ATTACK
+                            $(".attack-btn").on("click", function () {
+                                kyloHealth = kyloHealth - attackPower;
+                                lukeHealth = lukeHealth - counterPower;
+                                attackPower = attackPower + 8;
+                                    $("#luke-points").text("Health Points: " + lukeHealth);
+                                    $("#rey-points").text("Health Points: " + reyHealth);
+                                    $("#kylo-points").text("Health Points: " + kyloHealth);
+                                    $("#snoke-points").text("Health Points: " + snokeHealth);
+                                    if (kyloHealth <= 0) {
+                                        $("#defender-area").html("");
+                                    }
+                                    if (lukeHealth <= 0) {
+                                        $("#your-area").html("");
+                                    }
+                            });
+                        });
+            });
+            // ROUND 2: KYLO AS DEFENDER
+            $("#kylo-card").on("click", function () {
+                $("#defender-area").html(kylo);
+                $("#enemies-area").html(rey);
+                    $("#luke-points").text("Health Points: " + lukeHealth);
+                    $("#rey-points").text("Health Points: " + reyHealth);
+                    $("#kylo-points").text("Health Points: " + kyloHealth);
+                    $("#snoke-points").text("Health Points: " + snokeHealth);
+                // ATTACK
+                $(".attack-btn").on("click", function () {
+                    kyloHealth = kyloHealth - attackPower;
+                    lukeHealth = lukeHealth - counterPower;
+                    attackPower = attackPower + 8;
+                        $("#luke-points").text("Health Points: " + lukeHealth);
+                        $("#rey-points").text("Health Points: " + reyHealth);
+                        $("#kylo-points").text("Health Points: " + kyloHealth);
+                        $("#snoke-points").text("Health Points: " + snokeHealth);
+                        if (kyloHealth <= 0) {
+                            $("#defender-area").html("");
+                        }
+                        if (lukeHealth <= 0) {
+                            $("#your-area").html("");
+                        }
+                });
+                        // ROUND 3: REY AS DEFENDER
+                        $("#rey-card").on("click", function () {
+                            $("#defender-area").html(rey);
+                            $("#enemies-area").html("");
+                                $("#luke-points").text("Health Points: " + lukeHealth);
+                                $("#rey-points").text("Health Points: " + reyHealth);
+                                $("#kylo-points").text("Health Points: " + kyloHealth);
+                                $("#snoke-points").text("Health Points: " + snokeHealth);
+                            // ATTACK
+                            $(".attack-btn").on("click", function () {
+                                reyHealth = reyHealth - attackPower;
+                                lukeHealth = lukeHealth - counterPower;
+                                attackPower = attackPower + 8;
+                                    $("#luke-points").text("Health Points: " + lukeHealth);
+                                    $("#rey-points").text("Health Points: " + reyHealth);
+                                    $("#kylo-points").text("Health Points: " + kyloHealth);
+                                    $("#snoke-points").text("Health Points: " + snokeHealth);
+                                    if (reyHealth <= 0) {
+                                        $("#defender-area").html("");
+                                    }
+                                    if (lukeHealth <= 0) {
+                                        $("#your-area").html("");
+                                    }
+                            });
+                        });
+            });
     });
 });
 
-// CHOOSE TO PLAY AS REY
+
+
+
+
+
+
+
+
+
+
+
+
+
+// ----------------CHOOSE TO PLAY AS REY----------------
 $("#rey-card").on("click", function () {
     $(".choose-player").html("");
     $("#your-area").html(rey);
@@ -157,7 +496,113 @@ $("#rey-card").on("click", function () {
                 $("#rey-points").text("Health Points: " + reyHealth);
                 $("#kylo-points").text("Health Points: " + kyloHealth);
                 $("#snoke-points").text("Health Points: " + snokeHealth);
+                if (lukeHealth <= 0) {
+                    $("#defender-area").html("");
+                }
+                if (reyHealth <= 0) {
+                    $("#your-area").html("");
+                }
         });
+            // ROUND 2: KYLO AS DEFENDER
+            $("#kylo-card").on("click", function () {
+                $("#defender-area").html(kylo);
+                $("#enemies-area").html(snoke);
+                    $("#luke-points").text("Health Points: " + lukeHealth);
+                    $("#rey-points").text("Health Points: " + reyHealth);
+                    $("#kylo-points").text("Health Points: " + kyloHealth);
+                    $("#snoke-points").text("Health Points: " + snokeHealth);
+                // ATTACK
+                $(".attack-btn").on("click", function () {
+                    kyloHealth = kyloHealth - attackPower;
+                    reyHealth = reyHealth - counterPower;
+                    attackPower = attackPower + 8;
+                        $("#luke-points").text("Health Points: " + lukeHealth);
+                        $("#rey-points").text("Health Points: " + reyHealth);
+                        $("#kylo-points").text("Health Points: " + kyloHealth);
+                        $("#snoke-points").text("Health Points: " + snokeHealth);
+                        if (kyloHealth <= 0) {
+                            $("#defender-area").html("");
+                        }
+                        if (reyHealth <= 0) {
+                            $("#your-area").html("");
+                        }
+                });
+                        // ROUND 3: SNOKE AS DEFENDER
+                        $("#snoke-card").on("click", function () {
+                            $("#defender-area").html(snoke);
+                            $("#enemies-area").html("");
+                                $("#luke-points").text("Health Points: " + lukeHealth);
+                                $("#rey-points").text("Health Points: " + reyHealth);
+                                $("#kylo-points").text("Health Points: " + kyloHealth);
+                                $("#snoke-points").text("Health Points: " + snokeHealth);
+                            // ATTACK
+                            $(".attack-btn").on("click", function () {
+                                snokeHealth = snokeHealth - attackPower;
+                                reyHealth = reyHealth - counterPower;
+                                attackPower = attackPower + 8;
+                                    $("#luke-points").text("Health Points: " + lukeHealth);
+                                    $("#rey-points").text("Health Points: " + reyHealth);
+                                    $("#kylo-points").text("Health Points: " + kyloHealth);
+                                    $("#snoke-points").text("Health Points: " + snokeHealth);
+                                    if (snokeHealth <= 0) {
+                                        $("#defender-area").html("");
+                                    }
+                                    if (reyHealth <= 0) {
+                                        $("#your-area").html("");
+                                    }
+                            });
+                        });
+            });
+            // ROUND 2: SNOKE AS DEFENDER
+            $("#snoke-card").on("click", function () {
+                $("#defender-area").html(snoke);
+                $("#enemies-area").html(kylo);
+                    $("#luke-points").text("Health Points: " + lukeHealth);
+                    $("#rey-points").text("Health Points: " + reyHealth);
+                    $("#kylo-points").text("Health Points: " + kyloHealth);
+                    $("#snoke-points").text("Health Points: " + snokeHealth);
+                // ATTACK
+                $(".attack-btn").on("click", function () {
+                    snokeHealth = snokeHealth - attackPower;
+                    reyHealth = reyHealth - counterPower;
+                    attackPower = attackPower + 8;
+                        $("#luke-points").text("Health Points: " + lukeHealth);
+                        $("#rey-points").text("Health Points: " + reyHealth);
+                        $("#kylo-points").text("Health Points: " + kyloHealth);
+                        $("#snoke-points").text("Health Points: " + snokeHealth);
+                        if (snokeHealth <= 0) {
+                            $("#defender-area").html("");
+                        }
+                        if (reyHealth <= 0) {
+                            $("#your-area").html("");
+                        }
+                });
+                        // ROUND 3: KYLO AS DEFENDER
+                        $("#kylo-card").on("click", function () {
+                            $("#defender-area").html(kylo);
+                            $("#enemies-area").html("");
+                                $("#luke-points").text("Health Points: " + lukeHealth);
+                                $("#rey-points").text("Health Points: " + reyHealth);
+                                $("#kylo-points").text("Health Points: " + kyloHealth);
+                                $("#snoke-points").text("Health Points: " + snokeHealth);
+                            // ATTACK
+                            $(".attack-btn").on("click", function () {
+                                kyloHealth = kyloHealth - attackPower;
+                                reyHealth = reyHealth - counterPower;
+                                attackPower = attackPower + 8;
+                                    $("#luke-points").text("Health Points: " + lukeHealth);
+                                    $("#rey-points").text("Health Points: " + reyHealth);
+                                    $("#kylo-points").text("Health Points: " + kyloHealth);
+                                    $("#snoke-points").text("Health Points: " + snokeHealth);
+                                    if (kyloHealth <= 0) {
+                                        $("#defender-area").html("");
+                                    }
+                                    if (reyHealth <= 0) {
+                                        $("#your-area").html("");
+                                    }
+                            });
+                        });
+            });
     });
     // CHOOSE KYLO AS DEFENDER
     $("#kylo-card").on("click", function () {
@@ -176,7 +621,113 @@ $("#rey-card").on("click", function () {
                 $("#rey-points").text("Health Points: " + reyHealth);
                 $("#kylo-points").text("Health Points: " + kyloHealth);
                 $("#snoke-points").text("Health Points: " + snokeHealth);
+                if (kyloHealth <= 0) {
+                    $("#defender-area").html("");
+                }
+                if (reyHealth <= 0) {
+                    $("#your-area").html("");
+                }
         });
+            // ROUND 2: LUKE AS DEFENDER
+            $("#luke-card").on("click", function () {
+                $("#defender-area").html(luke);
+                $("#enemies-area").html(snoke);
+                    $("#luke-points").text("Health Points: " + lukeHealth);
+                    $("#rey-points").text("Health Points: " + reyHealth);
+                    $("#kylo-points").text("Health Points: " + kyloHealth);
+                    $("#snoke-points").text("Health Points: " + snokeHealth);
+                // ATTACK
+                $(".attack-btn").on("click", function () {
+                    lukeHealth = lukeHealth - attackPower;
+                    reyHealth = reyHealth - counterPower;
+                    attackPower = attackPower + 8;
+                        $("#luke-points").text("Health Points: " + lukeHealth);
+                        $("#rey-points").text("Health Points: " + reyHealth);
+                        $("#kylo-points").text("Health Points: " + kyloHealth);
+                        $("#snoke-points").text("Health Points: " + snokeHealth);
+                        if (lukeHealth <= 0) {
+                            $("#defender-area").html("");
+                        }
+                        if (reyHealth <= 0) {
+                            $("#your-area").html("");
+                        }
+                });
+                        // ROUND 3: SNOKE AS DEFENDER
+                        $("#snoke-card").on("click", function () {
+                            $("#defender-area").html(snoke);
+                            $("#enemies-area").html("");
+                                $("#luke-points").text("Health Points: " + lukeHealth);
+                                $("#rey-points").text("Health Points: " + reyHealth);
+                                $("#kylo-points").text("Health Points: " + kyloHealth);
+                                $("#snoke-points").text("Health Points: " + snokeHealth);
+                            // ATTACK
+                            $(".attack-btn").on("click", function () {
+                                snokeHealth = snokeHealth - attackPower;
+                                reyHealth = reyHealth - counterPower;
+                                attackPower = attackPower + 8;
+                                    $("#luke-points").text("Health Points: " + lukeHealth);
+                                    $("#rey-points").text("Health Points: " + reyHealth);
+                                    $("#kylo-points").text("Health Points: " + kyloHealth);
+                                    $("#snoke-points").text("Health Points: " + snokeHealth);
+                                    if (snokeHealth <= 0) {
+                                        $("#defender-area").html("");
+                                    }
+                                    if (reyHealth <= 0) {
+                                        $("#your-area").html("");
+                                    }
+                            });
+                        });
+            });
+            // ROUND 2: SNOKE AS DEFENDER
+            $("#snoke-card").on("click", function () {
+                $("#defender-area").html(snoke);
+                $("#enemies-area").html(luke);
+                    $("#luke-points").text("Health Points: " + lukeHealth);
+                    $("#rey-points").text("Health Points: " + reyHealth);
+                    $("#kylo-points").text("Health Points: " + kyloHealth);
+                    $("#snoke-points").text("Health Points: " + snokeHealth);
+                // ATTACK
+                $(".attack-btn").on("click", function () {
+                    snokeHealth = snokeHealth - attackPower;
+                    reyHealth = reyHealth - counterPower;
+                    attackPower = attackPower + 8;
+                        $("#luke-points").text("Health Points: " + lukeHealth);
+                        $("#rey-points").text("Health Points: " + reyHealth);
+                        $("#kylo-points").text("Health Points: " + kyloHealth);
+                        $("#snoke-points").text("Health Points: " + snokeHealth);
+                        if (snokeHealth <= 0) {
+                            $("#defender-area").html("");
+                        }
+                        if (reyHealth <= 0) {
+                            $("#your-area").html("");
+                        }
+                });
+                        // ROUND 3: LUKE AS DEFENDER
+                        $("#luke-card").on("click", function () {
+                            $("#defender-area").html(luke);
+                            $("#enemies-area").html("");
+                                $("#luke-points").text("Health Points: " + lukeHealth);
+                                $("#rey-points").text("Health Points: " + reyHealth);
+                                $("#kylo-points").text("Health Points: " + kyloHealth);
+                                $("#snoke-points").text("Health Points: " + snokeHealth);
+                            // ATTACK
+                            $(".attack-btn").on("click", function () {
+                                lukeHealth = lukeHealth - attackPower;
+                                reyHealth = reyHealth - counterPower;
+                                attackPower = attackPower + 8;
+                                    $("#luke-points").text("Health Points: " + lukeHealth);
+                                    $("#rey-points").text("Health Points: " + reyHealth);
+                                    $("#kylo-points").text("Health Points: " + kyloHealth);
+                                    $("#snoke-points").text("Health Points: " + snokeHealth);
+                                    if (lukeHealth <= 0) {
+                                        $("#defender-area").html("");
+                                    }
+                                    if (reyHealth <= 0) {
+                                        $("#your-area").html("");
+                                    }
+                            });
+                        });
+            });
     });
     // CHOOSE SNOKE AS DEFENDER
     $("#snoke-card").on("click", function () {
@@ -195,11 +746,130 @@ $("#rey-card").on("click", function () {
                 $("#rey-points").text("Health Points: " + reyHealth);
                 $("#kylo-points").text("Health Points: " + kyloHealth);
                 $("#snoke-points").text("Health Points: " + snokeHealth);
+                if (snokeHealth <= 0) {
+                    $("#defender-area").html("");
+                }
+                if (reyHealth <= 0) {
+                    $("#your-area").html("");
+                }
         });
+            // ROUND 2: LUKE AS DEFENDER
+            $("#luke-card").on("click", function () {
+                $("#defender-area").html(luke);
+                $("#enemies-area").html(kylo);
+                    $("#luke-points").text("Health Points: " + lukeHealth);
+                    $("#rey-points").text("Health Points: " + reyHealth);
+                    $("#kylo-points").text("Health Points: " + kyloHealth);
+                    $("#snoke-points").text("Health Points: " + snokeHealth);
+                // ATTACK
+                $(".attack-btn").on("click", function () {
+                    lukeHealth = lukeHealth - attackPower;
+                    reyHealth = reyHealth - counterPower;
+                    attackPower = attackPower + 8;
+                        $("#luke-points").text("Health Points: " + lukeHealth);
+                        $("#rey-points").text("Health Points: " + reyHealth);
+                        $("#kylo-points").text("Health Points: " + kyloHealth);
+                        $("#snoke-points").text("Health Points: " + snokeHealth);
+                        if (lukeHealth <= 0) {
+                            $("#defender-area").html("");
+                        }
+                        if (reyHealth <= 0) {
+                            $("#your-area").html("");
+                        }
+                });
+                        // ROUND 3: KYLO AS DEFENDER
+                        $("#kylo-card").on("click", function () {
+                            $("#defender-area").html(kylo);
+                            $("#enemies-area").html("");
+                                $("#luke-points").text("Health Points: " + lukeHealth);
+                                $("#rey-points").text("Health Points: " + reyHealth);
+                                $("#kylo-points").text("Health Points: " + kyloHealth);
+                                $("#snoke-points").text("Health Points: " + snokeHealth);
+                            // ATTACK
+                            $(".attack-btn").on("click", function () {
+                                kyloHealth = kyloHealth - attackPower;
+                                reyHealth = reyHealth - counterPower;
+                                attackPower = attackPower + 8;
+                                    $("#luke-points").text("Health Points: " + lukeHealth);
+                                    $("#rey-points").text("Health Points: " + reyHealth);
+                                    $("#kylo-points").text("Health Points: " + kyloHealth);
+                                    $("#snoke-points").text("Health Points: " + snokeHealth);
+                                    if (kyloHealth <= 0) {
+                                        $("#defender-area").html("");
+                                    }
+                                    if (reyHealth <= 0) {
+                                        $("#your-area").html("");
+                                    }
+                            });
+                        });
+            });
+            // ROUND 2: KYLO AS DEFENDER
+            $("#kylo-card").on("click", function () {
+                $("#defender-area").html(kylo);
+                $("#enemies-area").html(luke);
+                    $("#luke-points").text("Health Points: " + lukeHealth);
+                    $("#rey-points").text("Health Points: " + reyHealth);
+                    $("#kylo-points").text("Health Points: " + kyloHealth);
+                    $("#snoke-points").text("Health Points: " + snokeHealth);
+                // ATTACK
+                $(".attack-btn").on("click", function () {
+                    kyloHealth = kyloHealth - attackPower;
+                    reyHealth = reyHealth - counterPower;
+                    attackPower = attackPower + 8;
+                        $("#luke-points").text("Health Points: " + lukeHealth);
+                        $("#rey-points").text("Health Points: " + reyHealth);
+                        $("#kylo-points").text("Health Points: " + kyloHealth);
+                        $("#snoke-points").text("Health Points: " + snokeHealth);
+                        if (kyloHealth <= 0) {
+                            $("#defender-area").html("");
+                        }
+                        if (reyHealth <= 0) {
+                            $("#your-area").html("");
+                        }
+                });
+                        // ROUND 3: LUKE AS DEFENDER
+                        $("#luke-card").on("click", function () {
+                            $("#defender-area").html(luke);
+                            $("#enemies-area").html("");
+                                $("#luke-points").text("Health Points: " + lukeHealth);
+                                $("#rey-points").text("Health Points: " + reyHealth);
+                                $("#kylo-points").text("Health Points: " + kyloHealth);
+                                $("#snoke-points").text("Health Points: " + snokeHealth);
+                            // ATTACK
+                            $(".attack-btn").on("click", function () {
+                                lukeHealth = lukeHealth - attackPower;
+                                reyHealth = reyHealth - counterPower;
+                                attackPower = attackPower + 8;
+                                    $("#luke-points").text("Health Points: " + lukeHealth);
+                                    $("#rey-points").text("Health Points: " + reyHealth);
+                                    $("#kylo-points").text("Health Points: " + kyloHealth);
+                                    $("#snoke-points").text("Health Points: " + snokeHealth);
+                                    if (lukeHealth <= 0) {
+                                        $("#defender-area").html("");
+                                    }
+                                    if (reyHealth <= 0) {
+                                        $("#your-area").html("");
+                                    }
+                            });
+                        });
+            });
     });
 });
 
-// CHOOSE TO PLAY AS KYLO
+
+
+
+
+
+
+
+
+
+
+
+
+
+// ----------------CHOOSE TO PLAY AS KYLO----------------
 $("#kylo-card").on("click", function () {
     $(".choose-player").html("");
     $("#your-area").html(kylo);
@@ -226,7 +896,113 @@ $("#kylo-card").on("click", function () {
                 $("#rey-points").text("Health Points: " + reyHealth);
                 $("#kylo-points").text("Health Points: " + kyloHealth);
                 $("#snoke-points").text("Health Points: " + snokeHealth);
+                if (lukeHealth <= 0) {
+                    $("#defender-area").html("");
+                }
+                if (kyloHealth <= 0) {
+                    $("#your-area").html("");
+                }
         });
+            // ROUND 2: REY AS DEFENDER
+            $("#rey-card").on("click", function () {
+                $("#defender-area").html(rey);
+                $("#enemies-area").html(snoke);
+                    $("#luke-points").text("Health Points: " + lukeHealth);
+                    $("#rey-points").text("Health Points: " + reyHealth);
+                    $("#kylo-points").text("Health Points: " + kyloHealth);
+                    $("#snoke-points").text("Health Points: " + snokeHealth);
+                // ATTACK
+                $(".attack-btn").on("click", function () {
+                    reyHealth = reyHealth - attackPower;
+                    kyloHealth = kyloHealth - counterPower;
+                    attackPower = attackPower + 8;
+                        $("#luke-points").text("Health Points: " + lukeHealth);
+                        $("#rey-points").text("Health Points: " + reyHealth);
+                        $("#kylo-points").text("Health Points: " + kyloHealth);
+                        $("#snoke-points").text("Health Points: " + snokeHealth);
+                        if (reyHealth <= 0) {
+                            $("#defender-area").html("");
+                        }
+                        if (kyloHealth <= 0) {
+                            $("#your-area").html("");
+                        }
+                });
+                        // ROUND 3: SNOKE AS DEFENDER
+                        $("#snoke-card").on("click", function () {
+                            $("#defender-area").html(snoke);
+                            $("#enemies-area").html("");
+                                $("#luke-points").text("Health Points: " + lukeHealth);
+                                $("#rey-points").text("Health Points: " + reyHealth);
+                                $("#kylo-points").text("Health Points: " + kyloHealth);
+                                $("#snoke-points").text("Health Points: " + snokeHealth);
+                            // ATTACK
+                            $(".attack-btn").on("click", function () {
+                                snokeHealth = snokeHealth - attackPower;
+                                kyloHealth = kyloHealth - counterPower;
+                                attackPower = attackPower + 8;
+                                    $("#luke-points").text("Health Points: " + lukeHealth);
+                                    $("#rey-points").text("Health Points: " + reyHealth);
+                                    $("#kylo-points").text("Health Points: " + kyloHealth);
+                                    $("#snoke-points").text("Health Points: " + snokeHealth);
+                                    if (snokeHealth <= 0) {
+                                        $("#defender-area").html("");
+                                    }
+                                    if (kyloHealth <= 0) {
+                                        $("#your-area").html("");
+                                    }
+                            });
+                        });
+            });
+            // ROUND 2: SNOKE AS DEFENDER
+            $("#snoke-card").on("click", function () {
+                $("#defender-area").html(snoke);
+                $("#enemies-area").html(rey);
+                    $("#luke-points").text("Health Points: " + lukeHealth);
+                    $("#rey-points").text("Health Points: " + reyHealth);
+                    $("#kylo-points").text("Health Points: " + kyloHealth);
+                    $("#snoke-points").text("Health Points: " + snokeHealth);
+                // ATTACK
+                $(".attack-btn").on("click", function () {
+                    snokeHealth = snokeHealth - attackPower;
+                    kyloHealth = kyloHealth - counterPower;
+                    attackPower = attackPower + 8;
+                        $("#luke-points").text("Health Points: " + lukeHealth);
+                        $("#rey-points").text("Health Points: " + reyHealth);
+                        $("#kylo-points").text("Health Points: " + kyloHealth);
+                        $("#snoke-points").text("Health Points: " + snokeHealth);
+                        if (snokeHealth <= 0) {
+                            $("#defender-area").html("");
+                        }
+                        if (kyloHealth <= 0) {
+                            $("#your-area").html("");
+                        }
+                });
+                        // ROUND 3: REY AS DEFENDER
+                        $("#rey-card").on("click", function () {
+                            $("#defender-area").html(rey);
+                            $("#enemies-area").html("");
+                                $("#luke-points").text("Health Points: " + lukeHealth);
+                                $("#rey-points").text("Health Points: " + reyHealth);
+                                $("#kylo-points").text("Health Points: " + kyloHealth);
+                                $("#snoke-points").text("Health Points: " + snokeHealth);
+                            // ATTACK
+                            $(".attack-btn").on("click", function () {
+                                reyHealth = reyHealth - attackPower;
+                                kyloHealth = kyloHealth - counterPower;
+                                attackPower = attackPower + 8;
+                                    $("#luke-points").text("Health Points: " + lukeHealth);
+                                    $("#rey-points").text("Health Points: " + reyHealth);
+                                    $("#kylo-points").text("Health Points: " + kyloHealth);
+                                    $("#snoke-points").text("Health Points: " + snokeHealth);
+                                    if (reyHealth <= 0) {
+                                        $("#defender-area").html("");
+                                    }
+                                    if (kyloHealth <= 0) {
+                                        $("#your-area").html("");
+                                    }
+                            });
+                        });
+            });
     });
     // CHOOSE REY AS DEFENDER
     $("#rey-card").on("click", function () {
@@ -245,7 +1021,113 @@ $("#kylo-card").on("click", function () {
                 $("#rey-points").text("Health Points: " + reyHealth);
                 $("#kylo-points").text("Health Points: " + kyloHealth);
                 $("#snoke-points").text("Health Points: " + snokeHealth);
+                if (reyHealth <= 0) {
+                    $("#defender-area").html("");
+                }
+                if (kyloHealth <= 0) {
+                    $("#your-area").html("");
+                }
         });
+            // ROUND 2: LUKE AS DEFENDER
+            $("#luke-card").on("click", function () {
+                $("#defender-area").html(luke);
+                $("#enemies-area").html(snoke);
+                    $("#luke-points").text("Health Points: " + lukeHealth);
+                    $("#rey-points").text("Health Points: " + reyHealth);
+                    $("#kylo-points").text("Health Points: " + kyloHealth);
+                    $("#snoke-points").text("Health Points: " + snokeHealth);
+                // ATTACK
+                $(".attack-btn").on("click", function () {
+                    lukeHealth = lukeHealth - attackPower;
+                    kyloHealth = kyloHealth - counterPower;
+                    attackPower = attackPower + 8;
+                        $("#luke-points").text("Health Points: " + lukeHealth);
+                        $("#rey-points").text("Health Points: " + reyHealth);
+                        $("#kylo-points").text("Health Points: " + kyloHealth);
+                        $("#snoke-points").text("Health Points: " + snokeHealth);
+                        if (lukeHealth <= 0) {
+                            $("#defender-area").html("");
+                        }
+                        if (kyloHealth <= 0) {
+                            $("#your-area").html("");
+                        }
+                });
+                        // ROUND 3: SNOKE AS DEFENDER
+                        $("#snoke-card").on("click", function () {
+                            $("#defender-area").html(snoke);
+                            $("#enemies-area").html("");
+                                $("#luke-points").text("Health Points: " + lukeHealth);
+                                $("#rey-points").text("Health Points: " + reyHealth);
+                                $("#kylo-points").text("Health Points: " + kyloHealth);
+                                $("#snoke-points").text("Health Points: " + snokeHealth);
+                            // ATTACK
+                            $(".attack-btn").on("click", function () {
+                                snokeHealth = snokeHealth - attackPower;
+                                kyloHealth = kyloHealth - counterPower;
+                                attackPower = attackPower + 8;
+                                    $("#luke-points").text("Health Points: " + lukeHealth);
+                                    $("#rey-points").text("Health Points: " + reyHealth);
+                                    $("#kylo-points").text("Health Points: " + kyloHealth);
+                                    $("#snoke-points").text("Health Points: " + snokeHealth);
+                                    if (snokeHealth <= 0) {
+                                        $("#defender-area").html("");
+                                    }
+                                    if (kyloHealth <= 0) {
+                                        $("#your-area").html("");
+                                    }
+                            });
+                        });
+            });
+            // ROUND 2: SNOKE AS DEFENDER
+            $("#snoke-card").on("click", function () {
+                $("#defender-area").html(snoke);
+                $("#enemies-area").html(luke);
+                    $("#luke-points").text("Health Points: " + lukeHealth);
+                    $("#rey-points").text("Health Points: " + reyHealth);
+                    $("#kylo-points").text("Health Points: " + kyloHealth);
+                    $("#snoke-points").text("Health Points: " + snokeHealth);
+                // ATTACK
+                $(".attack-btn").on("click", function () {
+                    snokeHealth = snokeHealth - attackPower;
+                    kyloHealth = kyloHealth - counterPower;
+                    attackPower = attackPower + 8;
+                        $("#luke-points").text("Health Points: " + lukeHealth);
+                        $("#rey-points").text("Health Points: " + reyHealth);
+                        $("#kylo-points").text("Health Points: " + kyloHealth);
+                        $("#snoke-points").text("Health Points: " + snokeHealth);
+                        if (snokeHealth <= 0) {
+                            $("#defender-area").html("");
+                        }
+                        if (kyloHealth <= 0) {
+                            $("#your-area").html("");
+                        }
+                });
+                        // ROUND 3: LUKE AS DEFENDER
+                        $("#luke-card").on("click", function () {
+                            $("#defender-area").html(luke);
+                            $("#enemies-area").html("");
+                                $("#luke-points").text("Health Points: " + lukeHealth);
+                                $("#rey-points").text("Health Points: " + reyHealth);
+                                $("#kylo-points").text("Health Points: " + kyloHealth);
+                                $("#snoke-points").text("Health Points: " + snokeHealth);
+                            // ATTACK
+                            $(".attack-btn").on("click", function () {
+                                lukeHealth = lukeHealth - attackPower;
+                                kyloHealth = kyloHealth - counterPower;
+                                attackPower = attackPower + 8;
+                                    $("#luke-points").text("Health Points: " + lukeHealth);
+                                    $("#rey-points").text("Health Points: " + reyHealth);
+                                    $("#kylo-points").text("Health Points: " + kyloHealth);
+                                    $("#snoke-points").text("Health Points: " + snokeHealth);
+                                    if (lukeHealth <= 0) {
+                                        $("#defender-area").html("");
+                                    }
+                                    if (kyloHealth <= 0) {
+                                        $("#your-area").html("");
+                                    }
+                            });
+                        });
+            });
     });
     // CHOOSE SNOKE AS DEFENDER
     $("#snoke-card").on("click", function () {
@@ -264,11 +1146,128 @@ $("#kylo-card").on("click", function () {
                 $("#rey-points").text("Health Points: " + reyHealth);
                 $("#kylo-points").text("Health Points: " + kyloHealth);
                 $("#snoke-points").text("Health Points: " + snokeHealth);
+                if (snokeHealth <= 0) {
+                    $("#defender-area").html("");
+                }
+                if (kyloHealth <= 0) {
+                    $("#your-area").html("");
+                }
         });
+            // ROUND 2: LUKE AS DEFENDER
+            $("#luke-card").on("click", function () {
+                $("#defender-area").html(luke);
+                $("#enemies-area").html(rey);
+                    $("#luke-points").text("Health Points: " + lukeHealth);
+                    $("#rey-points").text("Health Points: " + reyHealth);
+                    $("#kylo-points").text("Health Points: " + kyloHealth);
+                    $("#snoke-points").text("Health Points: " + snokeHealth);
+                // ATTACK
+                $(".attack-btn").on("click", function () {
+                    lukeHealth = lukeHealth - attackPower;
+                    kyloHealth = kyloHealth - counterPower;
+                    attackPower = attackPower + 8;
+                        $("#luke-points").text("Health Points: " + lukeHealth);
+                        $("#rey-points").text("Health Points: " + reyHealth);
+                        $("#kylo-points").text("Health Points: " + kyloHealth);
+                        $("#snoke-points").text("Health Points: " + snokeHealth);
+                        if (lukeHealth <= 0) {
+                            $("#defender-area").html("");
+                        }
+                        if (kyloHealth <= 0) {
+                            $("#your-area").html("");
+                        }
+                });
+                        // ROUND 3: REY AS DEFENDER
+                        $("#rey-card").on("click", function () {
+                            $("#defender-area").html(rey);
+                            $("#enemies-area").html("");
+                                $("#luke-points").text("Health Points: " + lukeHealth);
+                                $("#rey-points").text("Health Points: " + reyHealth);
+                                $("#kylo-points").text("Health Points: " + kyloHealth);
+                                $("#snoke-points").text("Health Points: " + snokeHealth);
+                            // ATTACK
+                            $(".attack-btn").on("click", function () {
+                                reyHealth = reyHealth - attackPower;
+                                kyloHealth = kyloHealth - counterPower;
+                                attackPower = attackPower + 8;
+                                    $("#luke-points").text("Health Points: " + lukeHealth);
+                                    $("#rey-points").text("Health Points: " + reyHealth);
+                                    $("#kylo-points").text("Health Points: " + kyloHealth);
+                                    $("#snoke-points").text("Health Points: " + snokeHealth);
+                                    if (reyHealth <= 0) {
+                                        $("#defender-area").html("");
+                                    }
+                                    if (kyloHealth <= 0) {
+                                        $("#your-area").html("");
+                                    }
+                            });
+                        });
+            });
+            // ROUND 2: REY AS DEFENDER
+            $("#rey-card").on("click", function () {
+                $("#defender-area").html(rey);
+                $("#enemies-area").html(luke);
+                    $("#luke-points").text("Health Points: " + lukeHealth);
+                    $("#rey-points").text("Health Points: " + reyHealth);
+                    $("#kylo-points").text("Health Points: " + kyloHealth);
+                    $("#snoke-points").text("Health Points: " + snokeHealth);
+                // ATTACK
+                $(".attack-btn").on("click", function () {
+                    reyHealth = reyHealth - attackPower;
+                    kyloHealth = kyloHealth - counterPower;
+                    attackPower = attackPower + 8;
+                        $("#luke-points").text("Health Points: " + lukeHealth);
+                        $("#rey-points").text("Health Points: " + reyHealth);
+                        $("#kylo-points").text("Health Points: " + kyloHealth);
+                        $("#snoke-points").text("Health Points: " + snokeHealth);
+                        if (reyHealth <= 0) {
+                            $("#defender-area").html("");
+                        }
+                        if (kyloHealth <= 0) {
+                            $("#your-area").html("");
+                        }
+                });
+                        // ROUND 3: LUKE AS DEFENDER
+                        $("#luke-card").on("click", function () {
+                            $("#defender-area").html(luke);
+                            $("#enemies-area").html("");
+                                $("#luke-points").text("Health Points: " + lukeHealth);
+                                $("#rey-points").text("Health Points: " + reyHealth);
+                                $("#kylo-points").text("Health Points: " + kyloHealth);
+                                $("#snoke-points").text("Health Points: " + snokeHealth);
+                            // ATTACK
+                            $(".attack-btn").on("click", function () {
+                                lukeHealth = lukeHealth - attackPower;
+                                kyloHealth = kyloHealth - counterPower;
+                                attackPower = attackPower + 8;
+                                    $("#luke-points").text("Health Points: " + lukeHealth);
+                                    $("#rey-points").text("Health Points: " + reyHealth);
+                                    $("#kylo-points").text("Health Points: " + kyloHealth);
+                                    $("#snoke-points").text("Health Points: " + snokeHealth);
+                                    if (lukeHealth <= 0) {
+                                        $("#defender-area").html("");
+                                    }
+                                    if (kyloHealth <= 0) {
+                                        $("#your-area").html("");
+                                    }
+                            });
+                        });
+            });
     });
 });
 
-// CHOOSE TO PLAY AS SNOKE
+
+
+
+
+
+
+
+
+
+
+
+// ----------------CHOOSE TO PLAY AS SNOKE----------------
 $("#snoke-card").on("click", function () {
     $(".choose-player").html("");
     $("#your-area").html(snoke);
@@ -295,7 +1294,113 @@ $("#snoke-card").on("click", function () {
                 $("#rey-points").text("Health Points: " + reyHealth);
                 $("#kylo-points").text("Health Points: " + kyloHealth);
                 $("#snoke-points").text("Health Points: " + snokeHealth);
+                if (lukeHealth <= 0) {
+                    $("#defender-area").html("");
+                }
+                if (snokeHealth <= 0) {
+                    $("#your-area").html("");
+                }
         });
+            // ROUND 2: REY AS DEFENDER
+            $("#rey-card").on("click", function () {
+                $("#defender-area").html(rey);
+                $("#enemies-area").html(kylo);
+                    $("#luke-points").text("Health Points: " + lukeHealth);
+                    $("#rey-points").text("Health Points: " + reyHealth);
+                    $("#kylo-points").text("Health Points: " + kyloHealth);
+                    $("#snoke-points").text("Health Points: " + snokeHealth);
+                // ATTACK
+                $(".attack-btn").on("click", function () {
+                    reyHealth = reyHealth - attackPower;
+                    snokeHealth = snokeHealth - counterPower;
+                    attackPower = attackPower + 8;
+                        $("#luke-points").text("Health Points: " + lukeHealth);
+                        $("#rey-points").text("Health Points: " + reyHealth);
+                        $("#kylo-points").text("Health Points: " + kyloHealth);
+                        $("#snoke-points").text("Health Points: " + snokeHealth);
+                        if (reyHealth <= 0) {
+                            $("#defender-area").html("");
+                        }
+                        if (snokeHealth <= 0) {
+                            $("#your-area").html("");
+                        }
+                });
+                        // ROUND 3: KYLO AS DEFENDER
+                        $("#kylo-card").on("click", function () {
+                            $("#defender-area").html(kylo);
+                            $("#enemies-area").html("");
+                                $("#luke-points").text("Health Points: " + lukeHealth);
+                                $("#rey-points").text("Health Points: " + reyHealth);
+                                $("#kylo-points").text("Health Points: " + kyloHealth);
+                                $("#snoke-points").text("Health Points: " + snokeHealth);
+                            // ATTACK
+                            $(".attack-btn").on("click", function () {
+                                kyloHealth = kyloHealth - attackPower;
+                                snokeHealth = snokeHealth - counterPower;
+                                attackPower = attackPower + 8;
+                                    $("#luke-points").text("Health Points: " + lukeHealth);
+                                    $("#rey-points").text("Health Points: " + reyHealth);
+                                    $("#kylo-points").text("Health Points: " + kyloHealth);
+                                    $("#snoke-points").text("Health Points: " + snokeHealth);
+                                    if (kyloHealth <= 0) {
+                                        $("#defender-area").html("");
+                                    }
+                                    if (snokeHealth <= 0) {
+                                        $("#your-area").html("");
+                                    }
+                            });
+                        });
+            });
+            // ROUND 2: KYLO AS DEFENDER
+            $("#kylo-card").on("click", function () {
+                $("#defender-area").html(kylo);
+                $("#enemies-area").html(rey);
+                    $("#luke-points").text("Health Points: " + lukeHealth);
+                    $("#rey-points").text("Health Points: " + reyHealth);
+                    $("#kylo-points").text("Health Points: " + kyloHealth);
+                    $("#snoke-points").text("Health Points: " + snokeHealth);
+                // ATTACK
+                $(".attack-btn").on("click", function () {
+                    kyloHealth = kyloHealth - attackPower;
+                    snokeHealth = snokeHealth - counterPower;
+                    attackPower = attackPower + 8;
+                        $("#luke-points").text("Health Points: " + lukeHealth);
+                        $("#rey-points").text("Health Points: " + reyHealth);
+                        $("#kylo-points").text("Health Points: " + kyloHealth);
+                        $("#snoke-points").text("Health Points: " + snokeHealth);
+                        if (kyloHealth <= 0) {
+                            $("#defender-area").html("");
+                        }
+                        if (snokeHealth <= 0) {
+                            $("#your-area").html("");
+                        }
+                });
+                        // ROUND 3: REY AS DEFENDER
+                        $("#rey-card").on("click", function () {
+                            $("#defender-area").html(rey);
+                            $("#enemies-area").html("");
+                                $("#luke-points").text("Health Points: " + lukeHealth);
+                                $("#rey-points").text("Health Points: " + reyHealth);
+                                $("#kylo-points").text("Health Points: " + kyloHealth);
+                                $("#snoke-points").text("Health Points: " + snokeHealth);
+                            // ATTACK
+                            $(".attack-btn").on("click", function () {
+                                reyHealth = reyHealth - attackPower;
+                                snokeHealth = snokeHealth - counterPower;
+                                attackPower = attackPower + 8;
+                                    $("#luke-points").text("Health Points: " + lukeHealth);
+                                    $("#rey-points").text("Health Points: " + reyHealth);
+                                    $("#kylo-points").text("Health Points: " + kyloHealth);
+                                    $("#snoke-points").text("Health Points: " + snokeHealth);
+                                    if (reyHealth <= 0) {
+                                        $("#defender-area").html("");
+                                    }
+                                    if (snokeHealth <= 0) {
+                                        $("#your-area").html("");
+                                    }
+                            });
+                        });
+            });
     });
     // CHOOSE REY AS DEFENDER
     $("#rey-card").on("click", function () {
@@ -314,7 +1419,113 @@ $("#snoke-card").on("click", function () {
                 $("#rey-points").text("Health Points: " + reyHealth);
                 $("#kylo-points").text("Health Points: " + kyloHealth);
                 $("#snoke-points").text("Health Points: " + snokeHealth);
+                if (reyHealth <= 0) {
+                    $("#defender-area").html("");
+                }
+                if (snokeHealth <= 0) {
+                    $("#your-area").html("");
+                }
         });
+            // ROUND 2: LUKE AS DEFENDER
+            $("#luke-card").on("click", function () {
+                $("#defender-area").html(luke);
+                $("#enemies-area").html(kylo);
+                    $("#luke-points").text("Health Points: " + lukeHealth);
+                    $("#rey-points").text("Health Points: " + reyHealth);
+                    $("#kylo-points").text("Health Points: " + kyloHealth);
+                    $("#snoke-points").text("Health Points: " + snokeHealth);
+                // ATTACK
+                $(".attack-btn").on("click", function () {
+                    lukeHealth = lukeHealth - attackPower;
+                    snokeHealth = snokeHealth - counterPower;
+                    attackPower = attackPower + 8;
+                        $("#luke-points").text("Health Points: " + lukeHealth);
+                        $("#rey-points").text("Health Points: " + reyHealth);
+                        $("#kylo-points").text("Health Points: " + kyloHealth);
+                        $("#snoke-points").text("Health Points: " + snokeHealth);
+                        if (lukeHealth <= 0) {
+                            $("#defender-area").html("");
+                        }
+                        if (snokeHealth <= 0) {
+                            $("#your-area").html("");
+                        }
+                });
+                        // ROUND 3: KYLO AS DEFENDER
+                        $("#kylo-card").on("click", function () {
+                            $("#defender-area").html(kylo);
+                            $("#enemies-area").html("");
+                                $("#luke-points").text("Health Points: " + lukeHealth);
+                                $("#rey-points").text("Health Points: " + reyHealth);
+                                $("#kylo-points").text("Health Points: " + kyloHealth);
+                                $("#snoke-points").text("Health Points: " + snokeHealth);
+                            // ATTACK
+                            $(".attack-btn").on("click", function () {
+                                kyloHealth = kyloHealth - attackPower;
+                                snokeHealth = snokeHealth - counterPower;
+                                attackPower = attackPower + 8;
+                                    $("#luke-points").text("Health Points: " + lukeHealth);
+                                    $("#rey-points").text("Health Points: " + reyHealth);
+                                    $("#kylo-points").text("Health Points: " + kyloHealth);
+                                    $("#snoke-points").text("Health Points: " + snokeHealth);
+                                    if (kyloHealth <= 0) {
+                                        $("#defender-area").html("");
+                                    }
+                                    if (snokeHealth <= 0) {
+                                        $("#your-area").html("");
+                                    }
+                            });
+                        });
+            });
+            // ROUND 2: KYLO AS DEFENDER
+            $("#kylo-card").on("click", function () {
+                $("#defender-area").html(kylo);
+                $("#enemies-area").html(luke);
+                    $("#luke-points").text("Health Points: " + lukeHealth);
+                    $("#rey-points").text("Health Points: " + reyHealth);
+                    $("#kylo-points").text("Health Points: " + kyloHealth);
+                    $("#snoke-points").text("Health Points: " + snokeHealth);
+                // ATTACK
+                $(".attack-btn").on("click", function () {
+                    kyloHealth = kyloHealth - attackPower;
+                    snokeHealth = snokeHealth - counterPower;
+                    attackPower = attackPower + 8;
+                        $("#luke-points").text("Health Points: " + lukeHealth);
+                        $("#rey-points").text("Health Points: " + reyHealth);
+                        $("#kylo-points").text("Health Points: " + kyloHealth);
+                        $("#snoke-points").text("Health Points: " + snokeHealth);
+                        if (kyloHealth <= 0) {
+                            $("#defender-area").html("");
+                        }
+                        if (snokeHealth <= 0) {
+                            $("#your-area").html("");
+                        }
+                });
+                        // ROUND 3: LUKE AS DEFENDER
+                        $("#luke-card").on("click", function () {
+                            $("#defender-area").html(luke);
+                            $("#enemies-area").html("");
+                                $("#luke-points").text("Health Points: " + lukeHealth);
+                                $("#rey-points").text("Health Points: " + reyHealth);
+                                $("#kylo-points").text("Health Points: " + kyloHealth);
+                                $("#snoke-points").text("Health Points: " + snokeHealth);
+                            // ATTACK
+                            $(".attack-btn").on("click", function () {
+                                lukeHealth = lukeHealth - attackPower;
+                                snokeHealth = snokeHealth - counterPower;
+                                attackPower = attackPower + 8;
+                                    $("#luke-points").text("Health Points: " + lukeHealth);
+                                    $("#rey-points").text("Health Points: " + reyHealth);
+                                    $("#kylo-points").text("Health Points: " + kyloHealth);
+                                    $("#snoke-points").text("Health Points: " + snokeHealth);
+                                    if (lukeHealth <= 0) {
+                                        $("#defender-area").html("");
+                                    }
+                                    if (snokeHealth <= 0) {
+                                        $("#your-area").html("");
+                                    }
+                            });
+                        });
+            });
     });
     // CHOOSE KYLO AS DEFENDER
     $("#kylo-card").on("click", function () {
@@ -333,9 +1544,116 @@ $("#snoke-card").on("click", function () {
                 $("#rey-points").text("Health Points: " + reyHealth);
                 $("#kylo-points").text("Health Points: " + kyloHealth);
                 $("#snoke-points").text("Health Points: " + snokeHealth);
+                if (snokeHealth <= 0) {
+                    $("#defender-area").html("");
+                }
+                if (snokeHealth <= 0) {
+                    $("#your-area").html("");
+                }
         });
+            // ROUND 2: LUKE AS DEFENDER
+            $("#luke-card").on("click", function () {
+                $("#defender-area").html(luke);
+                $("#enemies-area").html(rey);
+                    $("#luke-points").text("Health Points: " + lukeHealth);
+                    $("#rey-points").text("Health Points: " + reyHealth);
+                    $("#kylo-points").text("Health Points: " + kyloHealth);
+                    $("#snoke-points").text("Health Points: " + snokeHealth);
+                // ATTACK
+                $(".attack-btn").on("click", function () {
+                    lukeHealth = lukeHealth - attackPower;
+                    snokeHealth = snokeHealth - counterPower;
+                    attackPower = attackPower + 8;
+                        $("#luke-points").text("Health Points: " + lukeHealth);
+                        $("#rey-points").text("Health Points: " + reyHealth);
+                        $("#kylo-points").text("Health Points: " + kyloHealth);
+                        $("#snoke-points").text("Health Points: " + snokeHealth);
+                        if (lukeHealth <= 0) {
+                            $("#defender-area").html("");
+                        }
+                        if (snokeHealth <= 0) {
+                            $("#your-area").html("");
+                        }
+                });
+                        // ROUND 3: REY AS DEFENDER
+                        $("#rey-card").on("click", function () {
+                            $("#defender-area").html(rey);
+                            $("#enemies-area").html("");
+                                $("#luke-points").text("Health Points: " + lukeHealth);
+                                $("#rey-points").text("Health Points: " + reyHealth);
+                                $("#kylo-points").text("Health Points: " + kyloHealth);
+                                $("#snoke-points").text("Health Points: " + snokeHealth);
+                            // ATTACK
+                            $(".attack-btn").on("click", function () {
+                                reyHealth = reyHealth - attackPower;
+                                snokeHealth = snokeHealth - counterPower;
+                                attackPower = attackPower + 8;
+                                    $("#luke-points").text("Health Points: " + lukeHealth);
+                                    $("#rey-points").text("Health Points: " + reyHealth);
+                                    $("#kylo-points").text("Health Points: " + kyloHealth);
+                                    $("#snoke-points").text("Health Points: " + snokeHealth);
+                                    if (reyHealth <= 0) {
+                                        $("#defender-area").html("");
+                                    }
+                                    if (snokeHealth <= 0) {
+                                        $("#your-area").html("");
+                                    }
+                            });
+                        });
+            });
+            // ROUND 2: REY AS DEFENDER
+            $("#rey-card").on("click", function () {
+                $("#defender-area").html(rey);
+                $("#enemies-area").html(luke);
+                    $("#luke-points").text("Health Points: " + lukeHealth);
+                    $("#rey-points").text("Health Points: " + reyHealth);
+                    $("#kylo-points").text("Health Points: " + kyloHealth);
+                    $("#snoke-points").text("Health Points: " + snokeHealth);
+                // ATTACK
+                $(".attack-btn").on("click", function () {
+                    reyHealth = reyHealth - attackPower;
+                    snokeHealth = snokeHealth - counterPower;
+                    attackPower = attackPower + 8;
+                        $("#luke-points").text("Health Points: " + lukeHealth);
+                        $("#rey-points").text("Health Points: " + reyHealth);
+                        $("#kylo-points").text("Health Points: " + kyloHealth);
+                        $("#snoke-points").text("Health Points: " + snokeHealth);
+                        if (reyHealth <= 0) {
+                            $("#defender-area").html("");
+                        }
+                        if (snokeHealth <= 0) {
+                            $("#your-area").html("");
+                        }
+                });
+                        // ROUND 3: LUKE AS DEFENDER
+                        $("#luke-card").on("click", function () {
+                            $("#defender-area").html(luke);
+                            $("#enemies-area").html("");
+                                $("#luke-points").text("Health Points: " + lukeHealth);
+                                $("#rey-points").text("Health Points: " + reyHealth);
+                                $("#kylo-points").text("Health Points: " + kyloHealth);
+                                $("#snoke-points").text("Health Points: " + snokeHealth);
+                            // ATTACK
+                            $(".attack-btn").on("click", function () {
+                                lukeHealth = lukeHealth - attackPower;
+                                snokeHealth = snokeHealth - counterPower;
+                                attackPower = attackPower + 8;
+                                    $("#luke-points").text("Health Points: " + lukeHealth);
+                                    $("#rey-points").text("Health Points: " + reyHealth);
+                                    $("#kylo-points").text("Health Points: " + kyloHealth);
+                                    $("#snoke-points").text("Health Points: " + snokeHealth);
+                                    if (lukeHealth <= 0) {
+                                        $("#defender-area").html("");
+                                    }
+                                    if (snokeHealth <= 0) {
+                                        $("#your-area").html("");
+                                    }
+                            });
+                        });
+            });
     });
 });
+
 
 // ------------------------------------------------
 });

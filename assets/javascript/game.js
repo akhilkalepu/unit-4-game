@@ -281,7 +281,7 @@ $("#snoke-card").on("click", function () {
     // CHOOSE LUKE AS DEFENDER
     $("#luke-card").on("click", function () {
         $("#defender-area").html(luke);
-        $("#enemies-area").html(rey + kyloHealth);
+        $("#enemies-area").html(rey + kylo);
             $("#luke-points").text("Health Points: " + lukeHealth);
             $("#rey-points").text("Health Points: " + reyHealth);
             $("#kylo-points").text("Health Points: " + kyloHealth);

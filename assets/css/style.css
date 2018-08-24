@@ -11,7 +11,7 @@ body {
     background-color: white;
     padding: 10px;
     text-align: center;
-    opacity: .35;
+    opacity: .45;
 }
 
 /* CHARACTER CARDS */
@@ -24,13 +24,13 @@ body {
         float: none;
     }
         .card-body {
-            width: 200px;
+            width: 120px;
             margin-top: 10px;
             padding: 5px;
             color: black;
             background-color: white;
             text-align: center;
-            opacity: .35;
+            opacity: .45;
         }
 
 /* ATTACK BUTTON */
@@ -44,7 +44,7 @@ body {
         color: black;
         background-color: red;
         text-align: center;
-        opacity: .35;
+        opacity: .45;
     }
 
 /* CHARACTER AREAS */
@@ -52,5 +52,5 @@ body {
     color: black;
     background-color: white;
     text-align: center;
-    opacity: .35;
+    opacity: .45;
 }

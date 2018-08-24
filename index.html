@@ -17,39 +17,39 @@
 
     <!-- CHARACTER CARDS -->
     <div class="choose-player">
-        <div class="card col-sm-3" id="luke" style="width:200px">
-            <img class="card-img-top" src="assets/images/lukeSky.jpg" width="200px" alt="luke skywalker">
-            <div class="card-body" id="luke-points">
-                <h4 class="card-title">Luke Skywalker</h4>
-                <p class="card-text">Health Points: </p>
+        <div class="card col-sm-3" id="luke-card" style="width:120px">
+            <img class="card-img-top" src="assets/images/lukeSky.jpg" width="120px" alt="luke skywalker">
+            <div class="card-body">
+                <h4 class="card-title">Luke</h4>
+                <p class="card-text" id="luke-points"></p>
             </div>
         </div>
-        <div class="card col-sm-3" id="rey" style="width:200px">
-            <img class="card-img-top" src="assets/images/rey.png" width="200px" alt="rey">
-            <div class="card-body" id="rey-points">
+        <div class="card col-sm-3" id="rey-card" style="width:120px">
+            <img class="card-img-top" src="assets/images/rey.png" width="120px" alt="rey">
+            <div class="card-body">
                 <h4 class="card-title">Rey</h4>
-                <p class="card-text">Health Points: </p>
+                <p class="card-text" id="rey-points"></p>
             </div>
         </div>
-        <div class="card col-sm-3" id="kylo" style="width:200px">
-            <img class="card-img-top" src="assets/images/kyloRen.jpg" width="200px" alt="kylo ren">
-            <div class="card-body" id="kylo-points">
-                <h4 class="card-title">Kylo Ren</h4>
-                <p class="card-text">Health Points: </p>
+        <div class="card col-sm-3" id="kylo-card" style="width:120px">
+            <img class="card-img-top" src="assets/images/kyloRen.jpg" width="120px" alt="kylo ren">
+            <div class="card-body">
+                <h4 class="card-title">Kylo</h4>
+                <p class="card-text" id="kylo-points"></p>
             </div>
         </div>
-        <div class="card col-sm-3" id="snoke" style="width:200px">
-            <img class="card-img-top" src="assets/images/snoke.jpg" width="200px" alt="snoke">
-            <div class="card-body" id="snoke-points">
+        <div class="card col-sm-3" id="snoke-card" style="width:120px">
+            <img class="card-img-top" src="assets/images/snoke.jpg" width="120px" alt="snoke">
+            <div class="card-body">
                 <h4 class="card-title">Snoke</h4>
-                <p class="card-text">Health Points: </p>
+                <p class="card-text" id="snoke-points"></p>
             </div>
         </div>
         
     </div>
 
     <!-- ATTACK BUTTON -->
-    <div class="attack-row col-sm-12">
+    <div class="attack-row col-xs-12">
         <button type="button" class="attack-btn"><h2>ATTACK</h2></button>
     </div>
 
@@ -59,19 +59,22 @@
             <div class="characters">
                 <h3>Your Character</h3>
             </div>
-
+            <div id="your-area">
+            </div>
         </div>
         <div class="col-sm-4">
             <div class="characters">
                 <h3>Defender</h3>
             </div>
-
+            <div id="defender-area">
+            </div>
         </div>
         <div class="col-sm-4">
             <div class="characters">
                 <h3>Enemies Available to Attack</h3>
             </div>
-
+            <div id="enemies-area">
+            </div>
         </div>
     </div>
 

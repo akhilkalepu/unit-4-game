@@ -101,6 +101,8 @@ $("#luke-card").on("click", function() {
                 }
                 if (lukeHealth <= 0) {
                     $("#your-area").html("");
+                    alert("YOU LOSE!");
+                    location.reload();
                 }
         });
             // ROUND 2: KYLO AS DEFENDER
@@ -125,6 +127,8 @@ $("#luke-card").on("click", function() {
                         }
                         if (lukeHealth <= 0) {
                             $("#your-area").html("");
+                            alert("YOU LOSE!");
+                            location.reload();
                         }
                 });
                         // ROUND 3: SNOKE AS DEFENDER
@@ -146,9 +150,13 @@ $("#luke-card").on("click", function() {
                                     $("#snoke-points").text("Health Points: " + snokeHealth);
                                     if (snokeHealth <= 0) {
                                         $("#defender-area").html("");
+                                        alert("YOU WIN!");
+                                        location.reload();
                                     }
                                     if (lukeHealth <= 0) {
                                         $("#your-area").html("");
+                                        alert("YOU LOSE!");
+                                        location.reload();
                                     }
                             });
                         });
@@ -175,6 +183,8 @@ $("#luke-card").on("click", function() {
                         }
                         if (lukeHealth <= 0) {
                             $("#your-area").html("");
+                            alert("YOU LOSE!");
+                            location.reload();
                         }
                 });
                         // ROUND 3: KYLO AS DEFENDER
@@ -196,9 +206,13 @@ $("#luke-card").on("click", function() {
                                     $("#snoke-points").text("Health Points: " + snokeHealth);
                                     if (kyloHealth <= 0) {
                                         $("#defender-area").html("");
+                                        alert("YOU WIN!");
+                                        location.reload();
                                     }
                                     if (lukeHealth <= 0) {
                                         $("#your-area").html("");
+                                        alert("YOU LOSE!");
+                                        location.reload();
                                     }
                             });
                         });
@@ -226,6 +240,8 @@ $("#luke-card").on("click", function() {
                 }
                 if (lukeHealth <= 0) {
                     $("#your-area").html("");
+                    alert("YOU LOSE!");
+                    location.reload();
                 }
         });
             // ROUND 2: REY AS DEFENDER
@@ -250,6 +266,8 @@ $("#luke-card").on("click", function() {
                         }
                         if (lukeHealth <= 0) {
                             $("#your-area").html("");
+                            alert("YOU LOSE!");
+                            location.reload();
                         }
                 });
                         // ROUND 3: SNOKE AS DEFENDER
@@ -271,9 +289,13 @@ $("#luke-card").on("click", function() {
                                     $("#snoke-points").text("Health Points: " + snokeHealth);
                                     if (snokeHealth <= 0) {
                                         $("#defender-area").html("");
+                                        alert("YOU WIN!");
+                                        location.reload();
                                     }
                                     if (lukeHealth <= 0) {
                                         $("#your-area").html("");
+                                        alert("YOU LOSE!");
+                                        location.reload();
                                     }
                             });
                         });
@@ -300,6 +322,8 @@ $("#luke-card").on("click", function() {
                         }
                         if (lukeHealth <= 0) {
                             $("#your-area").html("");
+                            alert("YOU LOSE!");
+                            location.reload();
                         }
                 });
                         // ROUND 3: REY AS DEFENDER
@@ -321,9 +345,13 @@ $("#luke-card").on("click", function() {
                                     $("#snoke-points").text("Health Points: " + snokeHealth);
                                     if (reyHealth <= 0) {
                                         $("#defender-area").html("");
+                                        alert("YOU WIN!");
+                                        location.reload();
                                     }
                                     if (lukeHealth <= 0) {
                                         $("#your-area").html("");
+                                        alert("YOU LOSE!");
+                                        location.reload();
                                     }
                             });
                         });
@@ -351,6 +379,8 @@ $("#luke-card").on("click", function() {
                 }
                 if (lukeHealth <= 0) {
                     $("#your-area").html("");
+                    alert("YOU LOSE!");
+                    location.reload();
                 }
         });
             // ROUND 2: REY AS DEFENDER
@@ -375,6 +405,8 @@ $("#luke-card").on("click", function() {
                         }
                         if (lukeHealth <= 0) {
                             $("#your-area").html("");
+                            alert("YOU LOSE!");
+                            location.reload();
                         }
                 });
                         // ROUND 3: KYLO AS DEFENDER
@@ -396,9 +428,13 @@ $("#luke-card").on("click", function() {
                                     $("#snoke-points").text("Health Points: " + snokeHealth);
                                     if (kyloHealth <= 0) {
                                         $("#defender-area").html("");
+                                        alert("YOU WIN!");
+                                        location.reload();
                                     }
                                     if (lukeHealth <= 0) {
                                         $("#your-area").html("");
+                                        alert("YOU LOSE!");
+                                        location.reload();
                                     }
                             });
                         });
@@ -425,6 +461,8 @@ $("#luke-card").on("click", function() {
                         }
                         if (lukeHealth <= 0) {
                             $("#your-area").html("");
+                            alert("YOU LOSE!");
+                            location.reload();
                         }
                 });
                         // ROUND 3: REY AS DEFENDER
@@ -446,9 +484,13 @@ $("#luke-card").on("click", function() {
                                     $("#snoke-points").text("Health Points: " + snokeHealth);
                                     if (reyHealth <= 0) {
                                         $("#defender-area").html("");
+                                        alert("YOU WIN!");
+                                        location.reload();
                                     }
                                     if (lukeHealth <= 0) {
                                         $("#your-area").html("");
+                                        alert("YOU LOSE!");
+                                        location.reload();
                                     }
                             });
                         });
@@ -501,6 +543,8 @@ $("#rey-card").on("click", function () {
                 }
                 if (reyHealth <= 0) {
                     $("#your-area").html("");
+                    alert("YOU LOSE!");
+                    location.reload();
                 }
         });
             // ROUND 2: KYLO AS DEFENDER
@@ -525,6 +569,8 @@ $("#rey-card").on("click", function () {
                         }
                         if (reyHealth <= 0) {
                             $("#your-area").html("");
+                            alert("YOU LOSE!");
+                            location.reload();
                         }
                 });
                         // ROUND 3: SNOKE AS DEFENDER
@@ -546,9 +592,13 @@ $("#rey-card").on("click", function () {
                                     $("#snoke-points").text("Health Points: " + snokeHealth);
                                     if (snokeHealth <= 0) {
                                         $("#defender-area").html("");
+                                        alert("YOU WIN!");
+                                        location.reload();
                                     }
                                     if (reyHealth <= 0) {
                                         $("#your-area").html("");
+                                        alert("YOU LOSE!");
+                                        location.reload();
                                     }
                             });
                         });
@@ -575,6 +625,8 @@ $("#rey-card").on("click", function () {
                         }
                         if (reyHealth <= 0) {
                             $("#your-area").html("");
+                            alert("YOU LOSE!");
+                            location.reload();
                         }
                 });
                         // ROUND 3: KYLO AS DEFENDER
@@ -596,9 +648,13 @@ $("#rey-card").on("click", function () {
                                     $("#snoke-points").text("Health Points: " + snokeHealth);
                                     if (kyloHealth <= 0) {
                                         $("#defender-area").html("");
+                                        alert("YOU WIN!");
+                                        location.reload();
                                     }
                                     if (reyHealth <= 0) {
                                         $("#your-area").html("");
+                                        alert("YOU LOSE!");
+                                        location.reload();
                                     }
                             });
                         });
@@ -626,6 +682,8 @@ $("#rey-card").on("click", function () {
                 }
                 if (reyHealth <= 0) {
                     $("#your-area").html("");
+                    alert("YOU LOSE!");
+                    location.reload();
                 }
         });
             // ROUND 2: LUKE AS DEFENDER
@@ -650,6 +708,8 @@ $("#rey-card").on("click", function () {
                         }
                         if (reyHealth <= 0) {
                             $("#your-area").html("");
+                            alert("YOU LOSE!");
+                            location.reload();
                         }
                 });
                         // ROUND 3: SNOKE AS DEFENDER
@@ -671,9 +731,13 @@ $("#rey-card").on("click", function () {
                                     $("#snoke-points").text("Health Points: " + snokeHealth);
                                     if (snokeHealth <= 0) {
                                         $("#defender-area").html("");
+                                        alert("YOU WIN!");
+                                        location.reload();
                                     }
                                     if (reyHealth <= 0) {
                                         $("#your-area").html("");
+                                        alert("YOU LOSE!");
+                                        location.reload();
                                     }
                             });
                         });
@@ -700,6 +764,8 @@ $("#rey-card").on("click", function () {
                         }
                         if (reyHealth <= 0) {
                             $("#your-area").html("");
+                            alert("YOU LOSE!");
+                            location.reload();
                         }
                 });
                         // ROUND 3: LUKE AS DEFENDER
@@ -721,9 +787,13 @@ $("#rey-card").on("click", function () {
                                     $("#snoke-points").text("Health Points: " + snokeHealth);
                                     if (lukeHealth <= 0) {
                                         $("#defender-area").html("");
+                                        alert("YOU WIN!");
+                                        location.reload();
                                     }
                                     if (reyHealth <= 0) {
                                         $("#your-area").html("");
+                                        alert("YOU LOSE!");
+                                        location.reload();
                                     }
                             });
                         });
@@ -751,6 +821,8 @@ $("#rey-card").on("click", function () {
                 }
                 if (reyHealth <= 0) {
                     $("#your-area").html("");
+                    alert("YOU LOSE!");
+                    location.reload();
                 }
         });
             // ROUND 2: LUKE AS DEFENDER
@@ -775,6 +847,8 @@ $("#rey-card").on("click", function () {
                         }
                         if (reyHealth <= 0) {
                             $("#your-area").html("");
+                            alert("YOU LOSE!");
+                            location.reload();
                         }
                 });
                         // ROUND 3: KYLO AS DEFENDER
@@ -796,9 +870,13 @@ $("#rey-card").on("click", function () {
                                     $("#snoke-points").text("Health Points: " + snokeHealth);
                                     if (kyloHealth <= 0) {
                                         $("#defender-area").html("");
+                                        alert("YOU WIN!");
+                                        location.reload();
                                     }
                                     if (reyHealth <= 0) {
                                         $("#your-area").html("");
+                                        alert("YOU LOSE!");
+                                        location.reload();
                                     }
                             });
                         });
@@ -825,6 +903,8 @@ $("#rey-card").on("click", function () {
                         }
                         if (reyHealth <= 0) {
                             $("#your-area").html("");
+                            alert("YOU LOSE!");
+                            location.reload();
                         }
                 });
                         // ROUND 3: LUKE AS DEFENDER
@@ -846,9 +926,13 @@ $("#rey-card").on("click", function () {
                                     $("#snoke-points").text("Health Points: " + snokeHealth);
                                     if (lukeHealth <= 0) {
                                         $("#defender-area").html("");
+                                        alert("YOU WIN!");
+                                        location.reload();
                                     }
                                     if (reyHealth <= 0) {
                                         $("#your-area").html("");
+                                        alert("YOU LOSE!");
+                                        location.reload();
                                     }
                             });
                         });
@@ -901,6 +985,8 @@ $("#kylo-card").on("click", function () {
                 }
                 if (kyloHealth <= 0) {
                     $("#your-area").html("");
+                    alert("YOU LOSE!");
+                    location.reload();
                 }
         });
             // ROUND 2: REY AS DEFENDER
@@ -925,6 +1011,8 @@ $("#kylo-card").on("click", function () {
                         }
                         if (kyloHealth <= 0) {
                             $("#your-area").html("");
+                            alert("YOU LOSE!");
+                            location.reload();
                         }
                 });
                         // ROUND 3: SNOKE AS DEFENDER
@@ -946,9 +1034,13 @@ $("#kylo-card").on("click", function () {
                                     $("#snoke-points").text("Health Points: " + snokeHealth);
                                     if (snokeHealth <= 0) {
                                         $("#defender-area").html("");
+                                        alert("YOU WIN!");
+                                        location.reload();
                                     }
                                     if (kyloHealth <= 0) {
                                         $("#your-area").html("");
+                                        alert("YOU LOSE!");
+                                        location.reload();
                                     }
                             });
                         });
@@ -975,6 +1067,8 @@ $("#kylo-card").on("click", function () {
                         }
                         if (kyloHealth <= 0) {
                             $("#your-area").html("");
+                            alert("YOU LOSE!");
+                            location.reload();
                         }
                 });
                         // ROUND 3: REY AS DEFENDER
@@ -996,9 +1090,13 @@ $("#kylo-card").on("click", function () {
                                     $("#snoke-points").text("Health Points: " + snokeHealth);
                                     if (reyHealth <= 0) {
                                         $("#defender-area").html("");
+                                        alert("YOU WIN!");
+                                        location.reload();
                                     }
                                     if (kyloHealth <= 0) {
                                         $("#your-area").html("");
+                                        alert("YOU LOSE!");
+                                        location.reload();
                                     }
                             });
                         });
@@ -1026,6 +1124,8 @@ $("#kylo-card").on("click", function () {
                 }
                 if (kyloHealth <= 0) {
                     $("#your-area").html("");
+                    alert("YOU LOSE!");
+                    location.reload();
                 }
         });
             // ROUND 2: LUKE AS DEFENDER
@@ -1050,6 +1150,8 @@ $("#kylo-card").on("click", function () {
                         }
                         if (kyloHealth <= 0) {
                             $("#your-area").html("");
+                            alert("YOU LOSE!");
+                            location.reload();
                         }
                 });
                         // ROUND 3: SNOKE AS DEFENDER
@@ -1071,9 +1173,13 @@ $("#kylo-card").on("click", function () {
                                     $("#snoke-points").text("Health Points: " + snokeHealth);
                                     if (snokeHealth <= 0) {
                                         $("#defender-area").html("");
+                                        alert("YOU WIN!");
+                                        location.reload();
                                     }
                                     if (kyloHealth <= 0) {
                                         $("#your-area").html("");
+                                        alert("YOU LOSE!");
+                                        location.reload();
                                     }
                             });
                         });
@@ -1100,6 +1206,8 @@ $("#kylo-card").on("click", function () {
                         }
                         if (kyloHealth <= 0) {
                             $("#your-area").html("");
+                            alert("YOU LOSE!");
+                            location.reload();
                         }
                 });
                         // ROUND 3: LUKE AS DEFENDER
@@ -1121,9 +1229,13 @@ $("#kylo-card").on("click", function () {
                                     $("#snoke-points").text("Health Points: " + snokeHealth);
                                     if (lukeHealth <= 0) {
                                         $("#defender-area").html("");
+                                        alert("YOU WIN!");
+                                        location.reload();
                                     }
                                     if (kyloHealth <= 0) {
                                         $("#your-area").html("");
+                                        alert("YOU LOSE!");
+                                        location.reload();
                                     }
                             });
                         });
@@ -1151,6 +1263,8 @@ $("#kylo-card").on("click", function () {
                 }
                 if (kyloHealth <= 0) {
                     $("#your-area").html("");
+                    alert("YOU LOSE!");
+                    location.reload();
                 }
         });
             // ROUND 2: LUKE AS DEFENDER
@@ -1175,6 +1289,8 @@ $("#kylo-card").on("click", function () {
                         }
                         if (kyloHealth <= 0) {
                             $("#your-area").html("");
+                            alert("YOU LOSE!");
+                            location.reload();
                         }
                 });
                         // ROUND 3: REY AS DEFENDER
@@ -1196,9 +1312,13 @@ $("#kylo-card").on("click", function () {
                                     $("#snoke-points").text("Health Points: " + snokeHealth);
                                     if (reyHealth <= 0) {
                                         $("#defender-area").html("");
+                                        alert("YOU WIN!");
+                                        location.reload();
                                     }
                                     if (kyloHealth <= 0) {
                                         $("#your-area").html("");
+                                        alert("YOU LOSE!");
+                                        location.reload();
                                     }
                             });
                         });
@@ -1225,6 +1345,8 @@ $("#kylo-card").on("click", function () {
                         }
                         if (kyloHealth <= 0) {
                             $("#your-area").html("");
+                            alert("YOU LOSE!");
+                            location.reload();
                         }
                 });
                         // ROUND 3: LUKE AS DEFENDER
@@ -1246,9 +1368,13 @@ $("#kylo-card").on("click", function () {
                                     $("#snoke-points").text("Health Points: " + snokeHealth);
                                     if (lukeHealth <= 0) {
                                         $("#defender-area").html("");
+                                        alert("YOU WIN!");
+                                        location.reload();
                                     }
                                     if (kyloHealth <= 0) {
                                         $("#your-area").html("");
+                                        alert("YOU LOSE!");
+                                        location.reload();
                                     }
                             });
                         });
@@ -1299,6 +1425,8 @@ $("#snoke-card").on("click", function () {
                 }
                 if (snokeHealth <= 0) {
                     $("#your-area").html("");
+                    alert("YOU LOSE!");
+                    location.reload();
                 }
         });
             // ROUND 2: REY AS DEFENDER
@@ -1323,6 +1451,8 @@ $("#snoke-card").on("click", function () {
                         }
                         if (snokeHealth <= 0) {
                             $("#your-area").html("");
+                            alert("YOU LOSE!");
+                            location.reload();
                         }
                 });
                         // ROUND 3: KYLO AS DEFENDER
@@ -1344,9 +1474,13 @@ $("#snoke-card").on("click", function () {
                                     $("#snoke-points").text("Health Points: " + snokeHealth);
                                     if (kyloHealth <= 0) {
                                         $("#defender-area").html("");
+                                        alert("YOU WIN!");
+                                        location.reload();
                                     }
                                     if (snokeHealth <= 0) {
                                         $("#your-area").html("");
+                                        alert("YOU LOSE!");
+                                        location.reload();
                                     }
                             });
                         });
@@ -1373,6 +1507,8 @@ $("#snoke-card").on("click", function () {
                         }
                         if (snokeHealth <= 0) {
                             $("#your-area").html("");
+                            alert("YOU LOSE!");
+                            location.reload();
                         }
                 });
                         // ROUND 3: REY AS DEFENDER
@@ -1394,9 +1530,13 @@ $("#snoke-card").on("click", function () {
                                     $("#snoke-points").text("Health Points: " + snokeHealth);
                                     if (reyHealth <= 0) {
                                         $("#defender-area").html("");
+                                        alert("YOU WIN!");
+                                        location.reload();
                                     }
                                     if (snokeHealth <= 0) {
                                         $("#your-area").html("");
+                                        alert("YOU LOSE!");
+                                        location.reload();
                                     }
                             });
                         });
@@ -1424,6 +1564,8 @@ $("#snoke-card").on("click", function () {
                 }
                 if (snokeHealth <= 0) {
                     $("#your-area").html("");
+                    alert("YOU LOSE!");
+                    location.reload();
                 }
         });
             // ROUND 2: LUKE AS DEFENDER
@@ -1448,6 +1590,8 @@ $("#snoke-card").on("click", function () {
                         }
                         if (snokeHealth <= 0) {
                             $("#your-area").html("");
+                            alert("YOU LOSE!");
+                            location.reload();
                         }
                 });
                         // ROUND 3: KYLO AS DEFENDER
@@ -1469,9 +1613,13 @@ $("#snoke-card").on("click", function () {
                                     $("#snoke-points").text("Health Points: " + snokeHealth);
                                     if (kyloHealth <= 0) {
                                         $("#defender-area").html("");
+                                        alert("YOU WIN!");
+                                        location.reload();
                                     }
                                     if (snokeHealth <= 0) {
                                         $("#your-area").html("");
+                                        alert("YOU LOSE!");
+                                        location.reload();
                                     }
                             });
                         });
@@ -1498,6 +1646,8 @@ $("#snoke-card").on("click", function () {
                         }
                         if (snokeHealth <= 0) {
                             $("#your-area").html("");
+                            alert("YOU LOSE!");
+                            location.reload();
                         }
                 });
                         // ROUND 3: LUKE AS DEFENDER
@@ -1519,9 +1669,13 @@ $("#snoke-card").on("click", function () {
                                     $("#snoke-points").text("Health Points: " + snokeHealth);
                                     if (lukeHealth <= 0) {
                                         $("#defender-area").html("");
+                                        alert("YOU WIN!");
+                                        location.reload();
                                     }
                                     if (snokeHealth <= 0) {
                                         $("#your-area").html("");
+                                        alert("YOU LOSE!");
+                                        location.reload();
                                     }
                             });
                         });
@@ -1549,6 +1703,8 @@ $("#snoke-card").on("click", function () {
                 }
                 if (snokeHealth <= 0) {
                     $("#your-area").html("");
+                    alert("YOU LOSE!");
+                    location.reload();
                 }
         });
             // ROUND 2: LUKE AS DEFENDER
@@ -1573,6 +1729,8 @@ $("#snoke-card").on("click", function () {
                         }
                         if (snokeHealth <= 0) {
                             $("#your-area").html("");
+                            alert("YOU LOSE!");
+                            location.reload();
                         }
                 });
                         // ROUND 3: REY AS DEFENDER
@@ -1594,9 +1752,13 @@ $("#snoke-card").on("click", function () {
                                     $("#snoke-points").text("Health Points: " + snokeHealth);
                                     if (reyHealth <= 0) {
                                         $("#defender-area").html("");
+                                        alert("YOU WIN!");
+                                        location.reload();
                                     }
                                     if (snokeHealth <= 0) {
                                         $("#your-area").html("");
+                                        alert("YOU LOSE!");
+                                        location.reload();
                                     }
                             });
                         });
@@ -1623,6 +1785,8 @@ $("#snoke-card").on("click", function () {
                         }
                         if (snokeHealth <= 0) {
                             $("#your-area").html("");
+                            alert("YOU LOSE!");
+                            location.reload();
                         }
                 });
                         // ROUND 3: LUKE AS DEFENDER
@@ -1644,9 +1808,13 @@ $("#snoke-card").on("click", function () {
                                     $("#snoke-points").text("Health Points: " + snokeHealth);
                                     if (lukeHealth <= 0) {
                                         $("#defender-area").html("");
+                                        alert("YOU WIN!");
+                                        location.reload();
                                     }
                                     if (snokeHealth <= 0) {
                                         $("#your-area").html("");
+                                        alert("YOU LOSE!");
+                                        location.reload();
                                     }
                             });
                         });

@@ -63,7 +63,8 @@ var counterPower = 25;
 
 
 
-
+// ATTACK POWER DOESN'T RESET AFTER ROUNDS
+// WIN ALERTS AFTER ROUND 3 NOT WORKING
 
 
 // --------------------------------GAME--------------------------------

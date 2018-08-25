@@ -56,7 +56,7 @@ var snokeHealth = 300;
 
 // ATTACK VARIABLES
 var attackPower = 8;
-var counterPower = 25;
+// var counterPower = 25;
 
 
 
@@ -91,7 +91,7 @@ $("#luke-card").on("click", function() {
         // ATTACK
         $(".attack-btn").on("click", function () {
             reyHealth = reyHealth - attackPower;
-            lukeHealth = lukeHealth - counterPower;
+            lukeHealth = lukeHealth - 25;
             attackPower = attackPower + 8;
                 $("#luke-points").text("Health Points: " + lukeHealth);
                 $("#rey-points").text("Health Points: " + reyHealth);
@@ -117,7 +117,7 @@ $("#luke-card").on("click", function() {
                 // ATTACK
                 $(".attack-btn").on("click", function () {
                     kyloHealth = kyloHealth - attackPower;
-                    lukeHealth = lukeHealth - counterPower;
+                    lukeHealth = lukeHealth - 25;
                     attackPower = attackPower + 8;
                         $("#luke-points").text("Health Points: " + lukeHealth);
                         $("#rey-points").text("Health Points: " + reyHealth);
@@ -143,7 +143,7 @@ $("#luke-card").on("click", function() {
                             // ATTACK
                             $(".attack-btn").on("click", function () {
                                 snokeHealth = snokeHealth - attackPower;
-                                lukeHealth = lukeHealth - counterPower;
+                                lukeHealth = lukeHealth - 25;
                                 attackPower = attackPower + 8;
                                     $("#luke-points").text("Health Points: " + lukeHealth);
                                     $("#rey-points").text("Health Points: " + reyHealth);
@@ -173,7 +173,7 @@ $("#luke-card").on("click", function() {
                 // ATTACK
                 $(".attack-btn").on("click", function () {
                     snokeHealth = snokeHealth - attackPower;
-                    lukeHealth = lukeHealth - counterPower;
+                    lukeHealth = lukeHealth - 25;
                     attackPower = attackPower + 8;
                         $("#luke-points").text("Health Points: " + lukeHealth);
                         $("#rey-points").text("Health Points: " + reyHealth);
@@ -199,7 +199,7 @@ $("#luke-card").on("click", function() {
                             // ATTACK
                             $(".attack-btn").on("click", function () {
                                 kyloHealth = kyloHealth - attackPower;
-                                lukeHealth = lukeHealth - counterPower;
+                                lukeHealth = lukeHealth - 25;
                                 attackPower = attackPower + 8;
                                     $("#luke-points").text("Health Points: " + lukeHealth);
                                     $("#rey-points").text("Health Points: " + reyHealth);
@@ -230,7 +230,7 @@ $("#luke-card").on("click", function() {
         // ATTACK
         $(".attack-btn").on("click", function () {
             kyloHealth = kyloHealth - attackPower;
-            lukeHealth = lukeHealth - counterPower;
+            lukeHealth = lukeHealth - 25;
             attackPower = attackPower + 8;
                 $("#luke-points").text("Health Points: " + lukeHealth);
                 $("#rey-points").text("Health Points: " + reyHealth);
@@ -256,7 +256,7 @@ $("#luke-card").on("click", function() {
                 // ATTACK
                 $(".attack-btn").on("click", function () {
                     reyHealth = reyHealth - attackPower;
-                    lukeHealth = lukeHealth - counterPower;
+                    lukeHealth = lukeHealth - 25;
                     attackPower = attackPower + 8;
                         $("#luke-points").text("Health Points: " + lukeHealth);
                         $("#rey-points").text("Health Points: " + reyHealth);
@@ -282,7 +282,7 @@ $("#luke-card").on("click", function() {
                             // ATTACK
                             $(".attack-btn").on("click", function () {
                                 snokeHealth = snokeHealth - attackPower;
-                                lukeHealth = lukeHealth - counterPower;
+                                lukeHealth = lukeHealth - 25;
                                 attackPower = attackPower + 8;
                                     $("#luke-points").text("Health Points: " + lukeHealth);
                                     $("#rey-points").text("Health Points: " + reyHealth);
@@ -312,7 +312,7 @@ $("#luke-card").on("click", function() {
                 // ATTACK
                 $(".attack-btn").on("click", function () {
                     snokeHealth = snokeHealth - attackPower;
-                    lukeHealth = lukeHealth - counterPower;
+                    lukeHealth = lukeHealth - 25;
                     attackPower = attackPower + 8;
                         $("#luke-points").text("Health Points: " + lukeHealth);
                         $("#rey-points").text("Health Points: " + reyHealth);
@@ -338,7 +338,7 @@ $("#luke-card").on("click", function() {
                             // ATTACK
                             $(".attack-btn").on("click", function () {
                                 reyHealth = reyHealth - attackPower;
-                                lukeHealth = lukeHealth - counterPower;
+                                lukeHealth = lukeHealth - 25;
                                 attackPower = attackPower + 8;
                                     $("#luke-points").text("Health Points: " + lukeHealth);
                                     $("#rey-points").text("Health Points: " + reyHealth);
@@ -369,7 +369,7 @@ $("#luke-card").on("click", function() {
         // ATTACK
         $(".attack-btn").on("click", function () {
             snokeHealth = snokeHealth - attackPower;
-            lukeHealth = lukeHealth - counterPower;
+            lukeHealth = lukeHealth - 25;
             attackPower = attackPower + 8;
                 $("#luke-points").text("Health Points: " + lukeHealth);
                 $("#rey-points").text("Health Points: " + reyHealth);
@@ -395,7 +395,7 @@ $("#luke-card").on("click", function() {
                 // ATTACK
                 $(".attack-btn").on("click", function () {
                     reyHealth = reyHealth - attackPower;
-                    lukeHealth = lukeHealth - counterPower;
+                    lukeHealth = lukeHealth - 25;
                     attackPower = attackPower + 8;
                         $("#luke-points").text("Health Points: " + lukeHealth);
                         $("#rey-points").text("Health Points: " + reyHealth);
@@ -421,7 +421,7 @@ $("#luke-card").on("click", function() {
                             // ATTACK
                             $(".attack-btn").on("click", function () {
                                 kyloHealth = kyloHealth - attackPower;
-                                lukeHealth = lukeHealth - counterPower;
+                                lukeHealth = lukeHealth - 25;
                                 attackPower = attackPower + 8;
                                     $("#luke-points").text("Health Points: " + lukeHealth);
                                     $("#rey-points").text("Health Points: " + reyHealth);
@@ -451,7 +451,7 @@ $("#luke-card").on("click", function() {
                 // ATTACK
                 $(".attack-btn").on("click", function () {
                     kyloHealth = kyloHealth - attackPower;
-                    lukeHealth = lukeHealth - counterPower;
+                    lukeHealth = lukeHealth - 25;
                     attackPower = attackPower + 8;
                         $("#luke-points").text("Health Points: " + lukeHealth);
                         $("#rey-points").text("Health Points: " + reyHealth);
@@ -477,7 +477,7 @@ $("#luke-card").on("click", function() {
                             // ATTACK
                             $(".attack-btn").on("click", function () {
                                 reyHealth = reyHealth - attackPower;
-                                lukeHealth = lukeHealth - counterPower;
+                                lukeHealth = lukeHealth - 25;
                                 attackPower = attackPower + 8;
                                     $("#luke-points").text("Health Points: " + lukeHealth);
                                     $("#rey-points").text("Health Points: " + reyHealth);
@@ -533,7 +533,7 @@ $("#rey-card").on("click", function () {
         // ATTACK
         $(".attack-btn").on("click", function () {
             lukeHealth = lukeHealth - attackPower;
-            reyHealth = reyHealth - counterPower;
+            reyHealth = reyHealth - 25;
             attackPower = attackPower + 8;
                 $("#luke-points").text("Health Points: " + lukeHealth);
                 $("#rey-points").text("Health Points: " + reyHealth);
@@ -559,7 +559,7 @@ $("#rey-card").on("click", function () {
                 // ATTACK
                 $(".attack-btn").on("click", function () {
                     kyloHealth = kyloHealth - attackPower;
-                    reyHealth = reyHealth - counterPower;
+                    reyHealth = reyHealth - 25;
                     attackPower = attackPower + 8;
                         $("#luke-points").text("Health Points: " + lukeHealth);
                         $("#rey-points").text("Health Points: " + reyHealth);
@@ -585,7 +585,7 @@ $("#rey-card").on("click", function () {
                             // ATTACK
                             $(".attack-btn").on("click", function () {
                                 snokeHealth = snokeHealth - attackPower;
-                                reyHealth = reyHealth - counterPower;
+                                reyHealth = reyHealth - 25;
                                 attackPower = attackPower + 8;
                                     $("#luke-points").text("Health Points: " + lukeHealth);
                                     $("#rey-points").text("Health Points: " + reyHealth);
@@ -615,7 +615,7 @@ $("#rey-card").on("click", function () {
                 // ATTACK
                 $(".attack-btn").on("click", function () {
                     snokeHealth = snokeHealth - attackPower;
-                    reyHealth = reyHealth - counterPower;
+                    reyHealth = reyHealth - 25;
                     attackPower = attackPower + 8;
                         $("#luke-points").text("Health Points: " + lukeHealth);
                         $("#rey-points").text("Health Points: " + reyHealth);
@@ -641,7 +641,7 @@ $("#rey-card").on("click", function () {
                             // ATTACK
                             $(".attack-btn").on("click", function () {
                                 kyloHealth = kyloHealth - attackPower;
-                                reyHealth = reyHealth - counterPower;
+                                reyHealth = reyHealth - 25;
                                 attackPower = attackPower + 8;
                                     $("#luke-points").text("Health Points: " + lukeHealth);
                                     $("#rey-points").text("Health Points: " + reyHealth);
@@ -672,7 +672,7 @@ $("#rey-card").on("click", function () {
         // ATTACK
         $(".attack-btn").on("click", function () {
             kyloHealth = kyloHealth - attackPower;
-            reyHealth = reyHealth - counterPower;
+            reyHealth = reyHealth - 25;
             attackPower = attackPower + 8;
                 $("#luke-points").text("Health Points: " + lukeHealth);
                 $("#rey-points").text("Health Points: " + reyHealth);
@@ -698,7 +698,7 @@ $("#rey-card").on("click", function () {
                 // ATTACK
                 $(".attack-btn").on("click", function () {
                     lukeHealth = lukeHealth - attackPower;
-                    reyHealth = reyHealth - counterPower;
+                    reyHealth = reyHealth - 25;
                     attackPower = attackPower + 8;
                         $("#luke-points").text("Health Points: " + lukeHealth);
                         $("#rey-points").text("Health Points: " + reyHealth);
@@ -724,7 +724,7 @@ $("#rey-card").on("click", function () {
                             // ATTACK
                             $(".attack-btn").on("click", function () {
                                 snokeHealth = snokeHealth - attackPower;
-                                reyHealth = reyHealth - counterPower;
+                                reyHealth = reyHealth - 25;
                                 attackPower = attackPower + 8;
                                     $("#luke-points").text("Health Points: " + lukeHealth);
                                     $("#rey-points").text("Health Points: " + reyHealth);
@@ -754,7 +754,7 @@ $("#rey-card").on("click", function () {
                 // ATTACK
                 $(".attack-btn").on("click", function () {
                     snokeHealth = snokeHealth - attackPower;
-                    reyHealth = reyHealth - counterPower;
+                    reyHealth = reyHealth - 25;
                     attackPower = attackPower + 8;
                         $("#luke-points").text("Health Points: " + lukeHealth);
                         $("#rey-points").text("Health Points: " + reyHealth);
@@ -780,7 +780,7 @@ $("#rey-card").on("click", function () {
                             // ATTACK
                             $(".attack-btn").on("click", function () {
                                 lukeHealth = lukeHealth - attackPower;
-                                reyHealth = reyHealth - counterPower;
+                                reyHealth = reyHealth - 25;
                                 attackPower = attackPower + 8;
                                     $("#luke-points").text("Health Points: " + lukeHealth);
                                     $("#rey-points").text("Health Points: " + reyHealth);
@@ -811,7 +811,7 @@ $("#rey-card").on("click", function () {
         // ATTACK
         $(".attack-btn").on("click", function () {
             snokeHealth = snokeHealth - attackPower;
-            reyHealth = reyHealth - counterPower;
+            reyHealth = reyHealth - 25;
             attackPower = attackPower + 8;
                 $("#luke-points").text("Health Points: " + lukeHealth);
                 $("#rey-points").text("Health Points: " + reyHealth);
@@ -837,7 +837,7 @@ $("#rey-card").on("click", function () {
                 // ATTACK
                 $(".attack-btn").on("click", function () {
                     lukeHealth = lukeHealth - attackPower;
-                    reyHealth = reyHealth - counterPower;
+                    reyHealth = reyHealth - 25;
                     attackPower = attackPower + 8;
                         $("#luke-points").text("Health Points: " + lukeHealth);
                         $("#rey-points").text("Health Points: " + reyHealth);
@@ -863,7 +863,7 @@ $("#rey-card").on("click", function () {
                             // ATTACK
                             $(".attack-btn").on("click", function () {
                                 kyloHealth = kyloHealth - attackPower;
-                                reyHealth = reyHealth - counterPower;
+                                reyHealth = reyHealth - 25;
                                 attackPower = attackPower + 8;
                                     $("#luke-points").text("Health Points: " + lukeHealth);
                                     $("#rey-points").text("Health Points: " + reyHealth);
@@ -893,7 +893,7 @@ $("#rey-card").on("click", function () {
                 // ATTACK
                 $(".attack-btn").on("click", function () {
                     kyloHealth = kyloHealth - attackPower;
-                    reyHealth = reyHealth - counterPower;
+                    reyHealth = reyHealth - 25;
                     attackPower = attackPower + 8;
                         $("#luke-points").text("Health Points: " + lukeHealth);
                         $("#rey-points").text("Health Points: " + reyHealth);
@@ -919,7 +919,7 @@ $("#rey-card").on("click", function () {
                             // ATTACK
                             $(".attack-btn").on("click", function () {
                                 lukeHealth = lukeHealth - attackPower;
-                                reyHealth = reyHealth - counterPower;
+                                reyHealth = reyHealth - 25;
                                 attackPower = attackPower + 8;
                                     $("#luke-points").text("Health Points: " + lukeHealth);
                                     $("#rey-points").text("Health Points: " + reyHealth);
@@ -975,7 +975,7 @@ $("#kylo-card").on("click", function () {
         // ATTACK
         $(".attack-btn").on("click", function () {
             lukeHealth = lukeHealth - attackPower;
-            kyloHealth = kyloHealth - counterPower;
+            kyloHealth = kyloHealth - 25;
             attackPower = attackPower + 8;
                 $("#luke-points").text("Health Points: " + lukeHealth);
                 $("#rey-points").text("Health Points: " + reyHealth);
@@ -1001,7 +1001,7 @@ $("#kylo-card").on("click", function () {
                 // ATTACK
                 $(".attack-btn").on("click", function () {
                     reyHealth = reyHealth - attackPower;
-                    kyloHealth = kyloHealth - counterPower;
+                    kyloHealth = kyloHealth - 25;
                     attackPower = attackPower + 8;
                         $("#luke-points").text("Health Points: " + lukeHealth);
                         $("#rey-points").text("Health Points: " + reyHealth);
@@ -1027,7 +1027,7 @@ $("#kylo-card").on("click", function () {
                             // ATTACK
                             $(".attack-btn").on("click", function () {
                                 snokeHealth = snokeHealth - attackPower;
-                                kyloHealth = kyloHealth - counterPower;
+                                kyloHealth = kyloHealth - 25;
                                 attackPower = attackPower + 8;
                                     $("#luke-points").text("Health Points: " + lukeHealth);
                                     $("#rey-points").text("Health Points: " + reyHealth);
@@ -1057,7 +1057,7 @@ $("#kylo-card").on("click", function () {
                 // ATTACK
                 $(".attack-btn").on("click", function () {
                     snokeHealth = snokeHealth - attackPower;
-                    kyloHealth = kyloHealth - counterPower;
+                    kyloHealth = kyloHealth - 25;
                     attackPower = attackPower + 8;
                         $("#luke-points").text("Health Points: " + lukeHealth);
                         $("#rey-points").text("Health Points: " + reyHealth);
@@ -1083,7 +1083,7 @@ $("#kylo-card").on("click", function () {
                             // ATTACK
                             $(".attack-btn").on("click", function () {
                                 reyHealth = reyHealth - attackPower;
-                                kyloHealth = kyloHealth - counterPower;
+                                kyloHealth = kyloHealth - 25;
                                 attackPower = attackPower + 8;
                                     $("#luke-points").text("Health Points: " + lukeHealth);
                                     $("#rey-points").text("Health Points: " + reyHealth);
@@ -1114,7 +1114,7 @@ $("#kylo-card").on("click", function () {
         // ATTACK
         $(".attack-btn").on("click", function () {
             reyHealth = reyHealth - attackPower;
-            kyloHealth = kyloHealth - counterPower;
+            kyloHealth = kyloHealth - 25;
             attackPower = attackPower + 8;
                 $("#luke-points").text("Health Points: " + lukeHealth);
                 $("#rey-points").text("Health Points: " + reyHealth);
@@ -1140,7 +1140,7 @@ $("#kylo-card").on("click", function () {
                 // ATTACK
                 $(".attack-btn").on("click", function () {
                     lukeHealth = lukeHealth - attackPower;
-                    kyloHealth = kyloHealth - counterPower;
+                    kyloHealth = kyloHealth - 25;
                     attackPower = attackPower + 8;
                         $("#luke-points").text("Health Points: " + lukeHealth);
                         $("#rey-points").text("Health Points: " + reyHealth);
@@ -1166,7 +1166,7 @@ $("#kylo-card").on("click", function () {
                             // ATTACK
                             $(".attack-btn").on("click", function () {
                                 snokeHealth = snokeHealth - attackPower;
-                                kyloHealth = kyloHealth - counterPower;
+                                kyloHealth = kyloHealth - 25;
                                 attackPower = attackPower + 8;
                                     $("#luke-points").text("Health Points: " + lukeHealth);
                                     $("#rey-points").text("Health Points: " + reyHealth);
@@ -1196,7 +1196,7 @@ $("#kylo-card").on("click", function () {
                 // ATTACK
                 $(".attack-btn").on("click", function () {
                     snokeHealth = snokeHealth - attackPower;
-                    kyloHealth = kyloHealth - counterPower;
+                    kyloHealth = kyloHealth - 25;
                     attackPower = attackPower + 8;
                         $("#luke-points").text("Health Points: " + lukeHealth);
                         $("#rey-points").text("Health Points: " + reyHealth);
@@ -1222,7 +1222,7 @@ $("#kylo-card").on("click", function () {
                             // ATTACK
                             $(".attack-btn").on("click", function () {
                                 lukeHealth = lukeHealth - attackPower;
-                                kyloHealth = kyloHealth - counterPower;
+                                kyloHealth = kyloHealth - 25;
                                 attackPower = attackPower + 8;
                                     $("#luke-points").text("Health Points: " + lukeHealth);
                                     $("#rey-points").text("Health Points: " + reyHealth);
@@ -1253,7 +1253,7 @@ $("#kylo-card").on("click", function () {
         // ATTACK
         $(".attack-btn").on("click", function () {
             snokeHealth = snokeHealth - attackPower;
-            kyloHealth = kyloHealth - counterPower;
+            kyloHealth = kyloHealth - 25;
             attackPower = attackPower + 8;
                 $("#luke-points").text("Health Points: " + lukeHealth);
                 $("#rey-points").text("Health Points: " + reyHealth);
@@ -1279,7 +1279,7 @@ $("#kylo-card").on("click", function () {
                 // ATTACK
                 $(".attack-btn").on("click", function () {
                     lukeHealth = lukeHealth - attackPower;
-                    kyloHealth = kyloHealth - counterPower;
+                    kyloHealth = kyloHealth - 25;
                     attackPower = attackPower + 8;
                         $("#luke-points").text("Health Points: " + lukeHealth);
                         $("#rey-points").text("Health Points: " + reyHealth);
@@ -1305,7 +1305,7 @@ $("#kylo-card").on("click", function () {
                             // ATTACK
                             $(".attack-btn").on("click", function () {
                                 reyHealth = reyHealth - attackPower;
-                                kyloHealth = kyloHealth - counterPower;
+                                kyloHealth = kyloHealth - 25;
                                 attackPower = attackPower + 8;
                                     $("#luke-points").text("Health Points: " + lukeHealth);
                                     $("#rey-points").text("Health Points: " + reyHealth);
@@ -1335,7 +1335,7 @@ $("#kylo-card").on("click", function () {
                 // ATTACK
                 $(".attack-btn").on("click", function () {
                     reyHealth = reyHealth - attackPower;
-                    kyloHealth = kyloHealth - counterPower;
+                    kyloHealth = kyloHealth - 25;
                     attackPower = attackPower + 8;
                         $("#luke-points").text("Health Points: " + lukeHealth);
                         $("#rey-points").text("Health Points: " + reyHealth);
@@ -1361,7 +1361,7 @@ $("#kylo-card").on("click", function () {
                             // ATTACK
                             $(".attack-btn").on("click", function () {
                                 lukeHealth = lukeHealth - attackPower;
-                                kyloHealth = kyloHealth - counterPower;
+                                kyloHealth = kyloHealth - 25;
                                 attackPower = attackPower + 8;
                                     $("#luke-points").text("Health Points: " + lukeHealth);
                                     $("#rey-points").text("Health Points: " + reyHealth);
@@ -1415,7 +1415,7 @@ $("#snoke-card").on("click", function () {
         // ATTACK
         $(".attack-btn").on("click", function () {
             lukeHealth = lukeHealth - attackPower;
-            snokeHealth = snokeHealth - counterPower;
+            snokeHealth = snokeHealth - 25;
             attackPower = attackPower + 8;
                 $("#luke-points").text("Health Points: " + lukeHealth);
                 $("#rey-points").text("Health Points: " + reyHealth);
@@ -1441,7 +1441,7 @@ $("#snoke-card").on("click", function () {
                 // ATTACK
                 $(".attack-btn").on("click", function () {
                     reyHealth = reyHealth - attackPower;
-                    snokeHealth = snokeHealth - counterPower;
+                    snokeHealth = snokeHealth - 25;
                     attackPower = attackPower + 8;
                         $("#luke-points").text("Health Points: " + lukeHealth);
                         $("#rey-points").text("Health Points: " + reyHealth);
@@ -1467,7 +1467,7 @@ $("#snoke-card").on("click", function () {
                             // ATTACK
                             $(".attack-btn").on("click", function () {
                                 kyloHealth = kyloHealth - attackPower;
-                                snokeHealth = snokeHealth - counterPower;
+                                snokeHealth = snokeHealth - 25;
                                 attackPower = attackPower + 8;
                                     $("#luke-points").text("Health Points: " + lukeHealth);
                                     $("#rey-points").text("Health Points: " + reyHealth);
@@ -1497,7 +1497,7 @@ $("#snoke-card").on("click", function () {
                 // ATTACK
                 $(".attack-btn").on("click", function () {
                     kyloHealth = kyloHealth - attackPower;
-                    snokeHealth = snokeHealth - counterPower;
+                    snokeHealth = snokeHealth - 25;
                     attackPower = attackPower + 8;
                         $("#luke-points").text("Health Points: " + lukeHealth);
                         $("#rey-points").text("Health Points: " + reyHealth);
@@ -1523,7 +1523,7 @@ $("#snoke-card").on("click", function () {
                             // ATTACK
                             $(".attack-btn").on("click", function () {
                                 reyHealth = reyHealth - attackPower;
-                                snokeHealth = snokeHealth - counterPower;
+                                snokeHealth = snokeHealth - 25;
                                 attackPower = attackPower + 8;
                                     $("#luke-points").text("Health Points: " + lukeHealth);
                                     $("#rey-points").text("Health Points: " + reyHealth);
@@ -1554,7 +1554,7 @@ $("#snoke-card").on("click", function () {
         // ATTACK
         $(".attack-btn").on("click", function () {
             reyHealth = reyHealth - attackPower;
-            snokeHealth = snokeHealth - counterPower;
+            snokeHealth = snokeHealth - 25;
             attackPower = attackPower + 8;
                 $("#luke-points").text("Health Points: " + lukeHealth);
                 $("#rey-points").text("Health Points: " + reyHealth);
@@ -1580,7 +1580,7 @@ $("#snoke-card").on("click", function () {
                 // ATTACK
                 $(".attack-btn").on("click", function () {
                     lukeHealth = lukeHealth - attackPower;
-                    snokeHealth = snokeHealth - counterPower;
+                    snokeHealth = snokeHealth - 25;
                     attackPower = attackPower + 8;
                         $("#luke-points").text("Health Points: " + lukeHealth);
                         $("#rey-points").text("Health Points: " + reyHealth);
@@ -1606,7 +1606,7 @@ $("#snoke-card").on("click", function () {
                             // ATTACK
                             $(".attack-btn").on("click", function () {
                                 kyloHealth = kyloHealth - attackPower;
-                                snokeHealth = snokeHealth - counterPower;
+                                snokeHealth = snokeHealth - 25;
                                 attackPower = attackPower + 8;
                                     $("#luke-points").text("Health Points: " + lukeHealth);
                                     $("#rey-points").text("Health Points: " + reyHealth);
@@ -1636,7 +1636,7 @@ $("#snoke-card").on("click", function () {
                 // ATTACK
                 $(".attack-btn").on("click", function () {
                     kyloHealth = kyloHealth - attackPower;
-                    snokeHealth = snokeHealth - counterPower;
+                    snokeHealth = snokeHealth - 25;
                     attackPower = attackPower + 8;
                         $("#luke-points").text("Health Points: " + lukeHealth);
                         $("#rey-points").text("Health Points: " + reyHealth);
@@ -1662,7 +1662,7 @@ $("#snoke-card").on("click", function () {
                             // ATTACK
                             $(".attack-btn").on("click", function () {
                                 lukeHealth = lukeHealth - attackPower;
-                                snokeHealth = snokeHealth - counterPower;
+                                snokeHealth = snokeHealth - 25;
                                 attackPower = attackPower + 8;
                                     $("#luke-points").text("Health Points: " + lukeHealth);
                                     $("#rey-points").text("Health Points: " + reyHealth);
@@ -1693,7 +1693,7 @@ $("#snoke-card").on("click", function () {
         // ATTACK
         $(".attack-btn").on("click", function () {
             kyloHealth = kyloHealth - attackPower;
-            snokeHealth = snokeHealth - counterPower;
+            snokeHealth = snokeHealth - 25;
             attackPower = attackPower + 8;
                 $("#luke-points").text("Health Points: " + lukeHealth);
                 $("#rey-points").text("Health Points: " + reyHealth);
@@ -1719,7 +1719,7 @@ $("#snoke-card").on("click", function () {
                 // ATTACK
                 $(".attack-btn").on("click", function () {
                     lukeHealth = lukeHealth - attackPower;
-                    snokeHealth = snokeHealth - counterPower;
+                    snokeHealth = snokeHealth - 25;
                     attackPower = attackPower + 8;
                         $("#luke-points").text("Health Points: " + lukeHealth);
                         $("#rey-points").text("Health Points: " + reyHealth);
@@ -1745,7 +1745,7 @@ $("#snoke-card").on("click", function () {
                             // ATTACK
                             $(".attack-btn").on("click", function () {
                                 reyHealth = reyHealth - attackPower;
-                                snokeHealth = snokeHealth - counterPower;
+                                snokeHealth = snokeHealth - 25;
                                 attackPower = attackPower + 8;
                                     $("#luke-points").text("Health Points: " + lukeHealth);
                                     $("#rey-points").text("Health Points: " + reyHealth);
@@ -1775,7 +1775,7 @@ $("#snoke-card").on("click", function () {
                 // ATTACK
                 $(".attack-btn").on("click", function () {
                     reyHealth = reyHealth - attackPower;
-                    snokeHealth = snokeHealth - counterPower;
+                    snokeHealth = snokeHealth - 25;
                     attackPower = attackPower + 8;
                         $("#luke-points").text("Health Points: " + lukeHealth);
                         $("#rey-points").text("Health Points: " + reyHealth);
@@ -1801,7 +1801,7 @@ $("#snoke-card").on("click", function () {
                             // ATTACK
                             $(".attack-btn").on("click", function () {
                                 lukeHealth = lukeHealth - attackPower;
-                                snokeHealth = snokeHealth - counterPower;
+                                snokeHealth = snokeHealth - 25;
                                 attackPower = attackPower + 8;
                                     $("#luke-points").text("Health Points: " + lukeHealth);
                                     $("#rey-points").text("Health Points: " + reyHealth);
